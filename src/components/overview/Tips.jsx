@@ -18,7 +18,7 @@ const Tips = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-auto-fit-xl w-full gap-4">
+      <div className="grid grid-auto-fit-xl w-full gap-4 py-4">
         {Physio.map((tips) => (
           <div key={tips.id} className="p-4 bg-white shadow-md">
             <h1 className="text-lg py-3 font-medium text-green-600">{tips.title}</h1>

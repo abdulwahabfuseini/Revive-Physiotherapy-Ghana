@@ -40,11 +40,11 @@ export const Treatment = [
 export const bannerSlide = [
     {
         id: 1,
-        cover: "bg.jpg"
+        cover: "bg2.jpg"
     },
     {
         id: 2,
-        cover: "bg6.jpg"
+        cover: "bg3.jpg"
     },
     {
         id: 3,
@@ -56,6 +56,10 @@ export const bannerSlide = [
     },
     {
         id: 5,
+        cover: "bg1.jpeg"
+    },
+    {
+        id: 6,
         cover: "bg10.jpg"
     },
 ]

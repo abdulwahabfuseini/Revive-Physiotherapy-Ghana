@@ -49,8 +49,8 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-2 px-2 lg:justify-center">
           <Image
-            width={25}
-            height={25}
+            width={30}
+            height={28}
             src="/SVG/clock.png"
             className="icon"
             alt="email"

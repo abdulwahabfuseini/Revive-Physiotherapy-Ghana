@@ -34,13 +34,13 @@ const Hero = () => {
           })}
         </div>
       </Swiper>
-      <div className="top-0 left-0 absolute w-full h-full bg-main bg-opacity-60 text-white z-40">
-        <div className=" py-20 max-w-7xl mx-auto px-3 sm:px-10">
+      <div className="top-0 left-0 absolute w-full h-full bg-main bg-opacity-70 text-white z-40">
+        <div className="py-12 lg:py-20 max-w-7xl mx-auto px-3 sm:px-10">
           <h1 className="text-2xl font-semibold">WELCOME TO</h1>
           <h4 className="text-3xl uppercase py-2">
             Revive Physiotherapy - Ghana{" "}
           </h4>
-          <p className="text-lg w-full sm:w-1/2">
+          <p className="text-lg w-full sm:w-3/4 lg:w-1/2">
             When you are looking for a qualify and trusted Therapist, Revive Physiotherapy got you covered. Don&lsquo;t hestiate to reach out to us, we are your most trusted
             consultants for Physiotherapy and wellness. We care about tour
             health
