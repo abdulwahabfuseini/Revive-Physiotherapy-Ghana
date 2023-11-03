@@ -7,7 +7,7 @@ import React from "react";
 
 const Card = ({ treat }) => {
   return (
-    <div className="bg-white hover:shadow-lg px-3 py-4 grid place-items-center cursor-pointer hover:scale-105">
+    <div className="bg-white  hover:shadow-md px-3 py-4 grid place-items-center cursor-pointer hover:scale-105">
       <Image
         width={60}
         height={60}
