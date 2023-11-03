@@ -18,11 +18,14 @@ const Choose = () => {
           </div>
         </div>
         <div>
-          <p>
+          <p className="text-lg">
+          Choosing physiotherapy can be a beneficial decision for various reasons, particularly when dealing with injuries, chronic pain, rehabilitation, or overall physical health. Here are some compelling reasons to consider physiotherapy
+          </p>
+          {/* <p>
             Physiotherapy offers personalized, non-invasive treatments, focusing
             on restoring movement, managing pain, and improving overall quality
             of life.
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="grid grid-auto-fit-xl w-full gap-3 py-6">

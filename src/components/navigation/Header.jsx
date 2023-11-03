@@ -47,7 +47,7 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div className="flex items-center gap-2 px-2 lg:justify-center">
+          <div className="flex items-center gap-4 lg:gap-3 lg:justify-center">
           <Image
             width={30}
             height={28}

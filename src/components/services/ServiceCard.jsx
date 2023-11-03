@@ -9,15 +9,15 @@ const ServiceCard = ({ therapy }) => {
   return (
     <div>
       <Link href={`/service/${therapy?.id}`}>
-        <div className="bg-white hover:shadow-lg pb-3">
+        <div className="pb-3 bg-white hover:shadow-lg">
           <Image
             src={`/images/${therapy.cover}`}
             alt=""
             width={600}
             height={600}
-            className=" h-40 object-cover"
+            className="object-cover h-40 "
           />
-          <div className="p-3 pb-1.5  grid  place-items-center">
+          <div className="grid p-3 gap-y-2 place-items-center">
             <h1 className="text-xl font-medium">{therapy.type}</h1>
            
             <Typography.Paragraph

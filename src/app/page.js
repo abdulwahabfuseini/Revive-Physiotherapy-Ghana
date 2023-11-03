@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Hero />
       <HomeAbout />
-      <div className="w-full h-full max-w-7xl mx-auto py-14 px-3">
+      <div className="w-full h-full px-3 mx-auto max-w-7xl py-14">
         <Offer />
         <Tips />
         <Appointment />

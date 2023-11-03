@@ -5,18 +5,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { bannerSlide } from "@/assets/Data";
+import Link from "next/link";
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: ["Revive Physiotherapy - Ghana"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 50,
+  });
+
   return (
-    <div className="w-full h-96 relative">
+    <div className="relative w-full sm:h-96 h-[490px]">
       <Swiper
-       spaceBetween={0}
-       slidesPerView={1}
+        spaceBetween={0}
+        slidesPerView={1}
         loop={true}
         speed={3000}
         modules={[Autoplay]}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
-      
       >
         <div>
           {bannerSlide.map((item, index) => {
@@ -26,7 +34,7 @@ const Hero = () => {
                   width={400}
                   height={40}
                   src={`/images/${item.cover}`}
-                  className="object-cover w-full h-96"
+                  className="object-cover w-full sm:h-96 h-[490px]"
                   alt="banner"
                 />
               </SwiperSlide>
@@ -34,17 +42,26 @@ const Hero = () => {
           })}
         </div>
       </Swiper>
-      <div className="top-0 left-0 absolute w-full h-full bg-main bg-opacity-70 text-white z-40">
-        <div className="py-12 lg:py-20 max-w-7xl mx-auto px-3 sm:px-10">
+      <div className="absolute top-0 left-0 z-40 w-full h-full px-2 text-white sm:px-4 bg-main bg-opacity-70">
+        <div className="py-12 mx-auto sm:py-20 max-w-7xl ">
           <h1 className="text-2xl font-semibold">WELCOME TO</h1>
-          <h4 className="text-3xl uppercase py-2">
-            Revive Physiotherapy - Ghana{" "}
+          <h4 className="hidden py-2 text-3xl uppercase sm:block">
+            <span>{text}</span> <Cursor />
           </h4>
-          <p className="text-lg w-full sm:w-3/4 lg:w-1/2">
-            When you are looking for a qualify and trusted Therapist, Revive Physiotherapy got you covered. Don&lsquo;t hestiate to reach out to us, we are your most trusted
-            consultants for Physiotherapy and wellness. We care about tour
-            health
+          <h4 className="py-2 text-3xl uppercase sm:hidden">
+            Revive Physiotherapy - Ghana
+          </h4>
+          <p className="w-full mb-6 text-lg max-w-lg">
+            When you are looking for a qualified and trusted Physioherapist,
+            Revive Physiotherapy - Ghana got you covered. Don&lsquo;t hestiate
+            to reach out to us, we are your most trusted consultants for
+            Physiotherapy and wellness. We care about tour health
           </p>
+          <Link href="/about">
+            <button className="px-3 py-2 text-lg rounded-lg bg-main hover:bg-green-600">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

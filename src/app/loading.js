@@ -17,7 +17,7 @@ const Loading = ({ children }) => {
   return (
     <div>
       {isLoading ? (
-        <div className="w-full h-screen flex items-center justify-center bg-main bg-opacity-30 top-0 left-0 right-0 absolute">
+        <div className="w-full h-screen flex items-center justify-center bg-main bg-opacity-70 sm:bg-opacity-30 bottom-0 left-0 right-0 absolute">
           <div className="relative">
             <Oval
               ariaLabel="loading-indicator"
@@ -29,10 +29,11 @@ const Loading = ({ children }) => {
               secondaryColor="white"
             />
             <Image
+            fill
               src={Logo}
               alt="logo"
               id="logo"
-              className="w-24 h-24 object-contain p-1.5 top-[1.2px] left-[0.2vw]  absolute"
+              className="p-2 object-contain"
             />
           </div>
         </div>

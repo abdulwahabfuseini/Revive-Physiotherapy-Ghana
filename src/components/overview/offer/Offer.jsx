@@ -5,7 +5,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Therapies } from "./Data";
+import { Therapies } from "../../services/Data";
 import OfferCard from "./OfferCard";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -21,15 +21,15 @@ const Offer = () => {
           <header className="text-3xl text-main">
             Physiotherapy Services at Revive
           </header>
-          <div className="flex gap-3 items-center py-3">
-            <h1 className=" uppercase text-green-600 font-medium">
+          <div className="flex items-center gap-3 py-3">
+            <h1 className="font-medium text-green-600 uppercase ">
               Physiotherapy Services
             </h1>
             <span className="w-16 h-[1.8px] bg-green-600"></span>
           </div>
         </div>
         <div>
-          <p>
+        <p className="text-lg">
             Physiotherapy services encompass tailored, non-invasive treatments
             aimed at restoring mobility, reducing pain, and enhancing overall
             well-being through exercises, manual therapy, and personalized care
@@ -39,7 +39,7 @@ const Offer = () => {
       </div>
       <Swiper
         navigation={{ nextEl, prevEl }}
-        spaceBetween={6}
+        spaceBetween={8}
         loop={true}
         speed={3000}
         modules={[Autoplay, Navigation]}
@@ -65,19 +65,19 @@ const Offer = () => {
         <div>
           {Therapies.map((item, index) => {
             return (
-              <SwiperSlide key={index} className="my-6">
+              <SwiperSlide key={index} className="mt-16">
                 <OfferCard item={item} />
               </SwiperSlide>
             );
           })}
         </div>
       </Swiper>
-      <div className="hidden lg:flex items-center justify-center gap-4 py-6">
+      <div className="items-center justify-center hidden gap-4 py-6 lg:flex">
         <button ref={(node) => setPrevtEl(node)}>
-          <FaChevronLeft className="w-12 h-11 p-2 font-bold bg-main text-white border-2 rounded-sm" />
+          <FaChevronLeft className="w-12 p-2 font-bold text-white border-2 rounded-sm h-11 bg-main" />
         </button>
         <button ref={(node) => setNextEl(node)}>
-          <FaChevronRight className="w-12 h-11 p-2 font-bold bg-main text-white border-2 rounded-sm" />
+          <FaChevronRight className="w-12 p-2 font-bold text-white border-2 rounded-sm h-11 bg-main" />
         </button>
       </div>
     </div>

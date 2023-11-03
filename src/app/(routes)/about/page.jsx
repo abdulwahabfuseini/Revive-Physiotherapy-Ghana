@@ -1,7 +1,7 @@
 import Background from "@/components/aboutUs/Background"
 import Choose from "@/components/aboutUs/choose/Choose"
+import Comment from "@/components/aboutUs/Comment"
 import Objectives from "@/components/aboutUs/Objectives"
-import Appointment from "@/components/overview/Appointment"
 
 export const metadata = {
     title: 'Revive Physiotherapy | About Us',
@@ -10,11 +10,11 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className="w-full h-full max-w-7xl mx-auto py-16 px-3 sm:px-4">
+    <div className="w-full h-full px-3 py-16 mx-auto max-w-7xl sm:px-4">
       <Background />
       <Objectives />
       <Choose />
-      <Appointment />
+      <Comment />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const OfferCard = ({ item }) => {
   return (
-    <div className="bg-white shadow-md p-2">
+    <div className="bg-white hover:shadow-md">
       <Link href={`/service/${item?.id}`}>
         <Image
           src={`/images/${item.cover}`}

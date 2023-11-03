@@ -15,7 +15,7 @@ const Chat = () => {
   return (
     <div>
       {appear && (
-        <div className="bottom-6 right-6 fixed z-50">
+        <div className="fixed z-50 bottom-8 right-8 sm:right-10">
           <Tooltip color=" green" title="Chat with us">
             <a href="https://wa.me/554339112" target="blank">
               <Image

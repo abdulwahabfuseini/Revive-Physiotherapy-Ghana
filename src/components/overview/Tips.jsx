@@ -1,4 +1,5 @@
 import { Physio } from "@/assets/Data";
+import Image from "next/image";
 import React from "react";
 
 const Tips = () => {
@@ -7,21 +8,34 @@ const Tips = () => {
       <div className="grid sm:grid-cols-2">
         <div>
           <header className="text-3xl text-main">Tips For Physiotherapy</header>
-          <div className="flex gap-3 items-center py-3">
-            <h1 className=" uppercase text-green-600 font-medium">Physiotherapy Advice</h1>
+          <div className="flex items-center gap-3 py-3">
+            <h1 className="font-medium text-green-600 uppercase ">
+              Physiotherapy Advice
+            </h1>
             <span className="w-16 h-[1.8px] bg-green-600"></span>
           </div>
         </div>
         <div>
-          <p>
-          These tips serve as a guideline for physiotherapists, assisting in the improvement of patients&apos; physical health, overall wellness, and quality of life.
+          <p className="text-lg">
+            These tips serve as a guideline for physiotherapists, assisting in
+            the improvement of patients&apos; physical health, overall wellness,
+            and quality of life.
           </p>
         </div>
       </div>
-      <div className="grid grid-auto-fit-xl w-full gap-4 py-4">
+      <div className="grid w-full gap-3 py-4 grid-auto-fit-xl">
         {Physio.map((tips) => (
-          <div key={tips.id} className="p-4 bg-white shadow-md">
-            <h1 className="text-lg py-3 font-medium text-green-600">{tips.title}</h1>
+          <div key={tips.id} className="p-4 bg-white hover:shadow-md cursor-pointer">
+            <Image
+              width={60}
+              height={60}
+              src={`/SVG/${tips.icon}`}
+              className="object-contain"
+              alt="banner"
+            />
+            <h1 className="py-3 text-lg font-medium text-green-600">
+              {tips.title}
+            </h1>
             <p>{tips.content}</p>
           </div>
         ))}
