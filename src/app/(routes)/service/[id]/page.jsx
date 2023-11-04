@@ -15,7 +15,7 @@ const Therapy = ({ params }) => {
   const treatments = getService(params.id);
   return (
     <div className="w-full h-full ">
-      <div className="px-2 py-20 mx-auto max-w-7xl sm:px-4">
+      <div className="px-3 py-20 mx-auto max-w-7xl sm:px-4">
         <HeadTitle title={treatments.type} path="Service" />
         <Physiotherapy treatments={treatments} />
       </div>

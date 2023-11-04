@@ -6,7 +6,7 @@ import Social from "./connect/Social";
 const Footer = () => {
   return (
     <div className="w-full h-full bg-white">
-      <div className="grid gap-6 px-4 py-10 mx-auto max-w-7xl sm:px-4 grid-auto-fit place-items-center ">
+      <div className="grid gap-6 px-4 py-10 mx-auto max-w-7xl sm:px-4 grid-auto-fit sm:place-items-center ">
         <div>
           <Link href="/">
             <div className="flex items-center gap-2">

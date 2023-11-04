@@ -45,7 +45,7 @@ const Comment = () => {
   };
 
   return (
-    <div className="grid py-3 sm:grid-cols-2 gap-y-6">
+    <div className="grid gap-3 py-3 sm:grid-cols-2 gap-y-6">
       <div>
         <header className="text-3xl capitalize text-main">
           Rate our performance by providing your details

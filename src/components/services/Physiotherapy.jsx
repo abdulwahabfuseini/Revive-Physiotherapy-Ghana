@@ -13,21 +13,21 @@ const Physiotherapy = ({ treatments }) => {
   return (
     <div>
       <div>
-        <h1 className="py-10 text-xl sm:text-3xl font-medium text-center uppercase">
+        <header className="py-5 text-xl font-semibold text-center uppercase sm:py-10 sm:text-3xl">
           {treatments.type}
-        </h1>
-        <div className="grid sm:grid-cols-3 gap-8">
+        </header>
+        <div className="grid gap-8 sm:grid-cols-3">
           <div className="relative h-80 sm:h-[550px] border-2 w-full rounded border-gray-50  sm:col-span-1 order-2 sm:order-1">
             <Image
               fill
               src={`/images/${treatments.cover}`}
-              className=" object-cover"
+              className="object-cover "
               alt="service"
             />
           </div>
-          <div className=" w-full sm:col-span-2 text-lg order-1 sm:order-2">
+          <div className="order-1 w-full text-lg sm:col-span-2 sm:order-2">
             <h1>{treatments.description}</h1>
-            <div className="grid rounded-lg gap-3 p-1 grid-cols-3 bg-white max-w-sm mx-auto my-5 shadow-sm">
+            <div className="grid max-w-sm grid-cols-3 gap-3 p-1 mx-auto my-5 bg-white rounded-lg shadow-sm">
               <button
                 onClick={() => toggleButton(1)}
                 className={
@@ -61,7 +61,7 @@ const Physiotherapy = ({ treatments }) => {
             </div>
             {toggleTab === 1 && (
               <div>
-                <h1 className="text-xl py-3 font-semibold uppercase">
+                <h1 className="py-3 text-xl font-semibold uppercase">
                   {treatments.title1}
                 </h1>
                 {treatments.causes.map((cause, index) => (
@@ -76,7 +76,7 @@ const Physiotherapy = ({ treatments }) => {
             )}
             {toggleTab === 2 && (
               <div>
-                <h1 className="text-xl py-3 font-semibold uppercase">
+                <h1 className="py-3 text-xl font-semibold uppercase">
                   {treatments.title2}
                 </h1>
                 {treatments.symptoms.map((symptom, index) => (
@@ -91,7 +91,7 @@ const Physiotherapy = ({ treatments }) => {
             )}
             {toggleTab === 3 && (
               <div>
-                <h1 className="text-xl py-3 font-semibold uppercase">
+                <h1 className="py-3 text-xl font-semibold uppercase">
                   {treatments.title3}
                 </h1>
                 {treatments.treatment.map((treat, index) => (
@@ -107,7 +107,7 @@ const Physiotherapy = ({ treatments }) => {
           </div>
         </div>
         <div className="py-8">
-          <h1 className="text-xl font-medium">NOTE:</h1>
+          <h1 className="text-xl font-semibold">NOTE:</h1>
           <p className="text-lg">{treatments?.note}</p>
         </div>
       </div>
