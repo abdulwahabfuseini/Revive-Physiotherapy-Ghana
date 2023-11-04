@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bodoni+Moda:opsz@6..96&family=Cardo&family=Gilda+Display&family=IBM+Plex+Serif:wght@300&family=Playfair+Display&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    h1, h2, h4,  h5, h6 {
+        font-family: 'IBM Plex Serif', serif;
+  }
+  header, h3{
+    font-family: 'Playfair Display', serif;
+  }
+  p, a, button, span{
+    font-family: 'Gilda Display', serif;
+  }
+}

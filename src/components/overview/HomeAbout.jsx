@@ -9,10 +9,10 @@ const HomeAbout = () => {
         <div className="space-y-3 ">
           <div className="flex items-center gap-2">
             <span className="w-10 h-[1.8px] bg-green-600"></span>
-            <h1 className="text-2xl text-green-600 ">PT. ISAAC BAAFI</h1>
+            <h1 className="text-2xl font-semibold text-green-600">PT. ISAAC BAAFI</h1>
             <span className="w-10 h-[1.8px] bg-green-600"></span>
           </div>
-          <p className="break-words text-lg">
+          <p className="text-lg break-words sm:text-xl">
             A successful physiotherapist embodies a blend of clinical expertise,
             empathy, communication skills, a commitment to continual learning,
             and a patient-centered approach, aiming to provide quality care and

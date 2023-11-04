@@ -52,7 +52,7 @@ const ContactForm = () => {
 
   return (
     <div className="w-full h-full">
-      <h1 className="pb-4 text-center text-2xl">Leave a Message</h1>
+      <h3 className="pb-4 text-2xl text-center">Leave a Message</h3>
       <Form onFinish={handleSubmit} form={form}>
         <Form.Item
           name="name"
@@ -68,7 +68,7 @@ const ContactForm = () => {
             placeholder="Enter Full Name"
             name="name"
             onChange={handleChange}
-            className="w-full h-12 text-lg cursor-pointer border-2"
+            className="w-full text-lg border-2 cursor-pointer h-14"
             type="text"
           />
         </Form.Item>
@@ -88,7 +88,7 @@ const ContactForm = () => {
             placeholder="Enter your Email"
             name="email"
             onChange={handleChange}
-            className="h-12 w-full text-lg cursor-pointer border-2"
+            className="w-full text-lg border-2 cursor-pointer h-14"
           />
         </Form.Item>
         <Form.Item
@@ -106,7 +106,7 @@ const ContactForm = () => {
             placeholder="Enter Phone Number"
             name="phoneNumber"
             onChange={handleChange}
-            className="h-12 w-full py-2 text-lg cursor-pointer border-2"
+            className="w-full py-2 text-lg border-2 cursor-pointer h-14"
           />
         </Form.Item>
         <Form.Item
@@ -123,13 +123,13 @@ const ContactForm = () => {
             placeholder="Enter Message"
             name="message"
             onChange={handleChange}
-            className="py-2 text-lg w-full cursor-pointer border-2"
+            className="w-full py-2 text-lg border-2 cursor-pointer"
           />
         </Form.Item>
         <Button
           htmlType="submit"
           type="primary"
-          className="h-12 w-full my-4 text-xl bg-main cursor-pointer"
+          className="w-full my-4 text-xl cursor-pointer h-14 bg-main"
         >
           {loading ? "Sending..." : "Send Message"}
         </Button>

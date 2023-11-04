@@ -51,7 +51,7 @@ const Comment = () => {
           Rate our performance by providing your details
         </header>
         <div className="flex items-center gap-3 py-3">
-          <h1 className="font-medium text-green-600 uppercase ">
+          <h1 className="font-semibold text-green-600 uppercase ">
             Say Something About Revive
           </h1>
           <span className="w-16 h-[1.8px] bg-green-600 "></span>
@@ -91,9 +91,9 @@ const Comment = () => {
           <button
             disabled={loading}
             type="submit"
-            className="px-16 py-3 text-lg text-white bg-main hover:bg-green-600"
+            className="px-16 py-3 text-lg text-white rounded-md sm bg-main hover:bg-green-600 sm:text-xl"
           >
-            {loading ? "Submitting..." : "Submit"}
+            {loading && error ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>

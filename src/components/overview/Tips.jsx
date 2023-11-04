@@ -9,7 +9,7 @@ const Tips = () => {
         <div>
           <header className="text-3xl text-main">Tips For Physiotherapy</header>
           <div className="flex items-center gap-3 py-3">
-            <h1 className="font-medium text-green-600 uppercase ">
+            <h1 className="font-semibold text-green-600 uppercase">
               Physiotherapy Advice
             </h1>
             <span className="w-16 h-[1.8px] bg-green-600"></span>
@@ -25,7 +25,10 @@ const Tips = () => {
       </div>
       <div className="grid w-full gap-3 py-4 grid-auto-fit-xl">
         {Physio.map((tips) => (
-          <div key={tips.id} className="p-4 bg-white hover:shadow-md cursor-pointer">
+          <div
+            key={tips.id}
+            className="p-4 bg-white cursor-pointer hover:shadow-md"
+          >
             <Image
               width={60}
               height={60}
@@ -33,10 +36,10 @@ const Tips = () => {
               className="object-contain"
               alt="banner"
             />
-            <h1 className="py-3 text-lg font-medium text-green-600">
+            <h1 className="py-3 text-xl font-semibold text-green-600">
               {tips.title}
             </h1>
-            <p>{tips.content}</p>
+            <p className="text-lg">{tips.content}</p>
           </div>
         ))}
       </div>

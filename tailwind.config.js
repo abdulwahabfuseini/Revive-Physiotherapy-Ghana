@@ -11,6 +11,7 @@ module.exports = {
         Text: "#333333",
         foot: "#00031f",
         main: "#103C65",
+        glass: "rgba(255, 255, 255, 0.1)"
       }
     },
   },

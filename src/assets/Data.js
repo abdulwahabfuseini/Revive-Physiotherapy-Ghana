@@ -9,7 +9,7 @@ export const mission = [
     id: 2,
     title: "Our Vision",
     content:
-      " We aims to articulate the desired future state, guiding the practice&apos;s efforts to provide exemplary care, foster wellness, and make a positive impact on individuals and communities.",
+      " We aims to articulate the desired future state, guiding the practice's efforts to provide exemplary care, foster wellness, and make a positive impact on individuals and communities.",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const Treatment = [
     title: "Individual Attention",
     imgUrl: "patient.png",
     content:
-      "providing personalized support tailored to an individual's unique needs, promoting better learning, growth, and overall positive outcomes. It's essential in education, healthcare, and other settings, offering benefits such as improved learning, increased confidence, and better engagement.",
+      "Providing personalized support tailored to an individual's unique needs, promoting better learning, growth, and overall positive outcomes. It's essential in education, healthcare, and other settings, offering benefits such as improved learning, increased confidence, and better engagement.",
   },
   {
     id: 3,

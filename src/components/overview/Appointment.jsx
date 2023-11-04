@@ -63,7 +63,7 @@ const Appointment = () => {
       <div>
         <header className="text-3xl text-main">Consultation With Revive</header>
         <div className="flex items-center gap-3 py-3">
-          <h1 className="font-medium text-green-600 uppercase ">
+          <h1 className="font-semibold text-green-600 uppercase ">
             Book an Appointment
           </h1>
           <span className="w-16 h-[1.8px] bg-green-600 "></span>
@@ -74,7 +74,7 @@ const Appointment = () => {
           <div className="w-full p-2 mb-2 text-white bg-red-600">{error}</div>
         )}
         <form action="POST" onSubmit={handleSubmit}>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-2 sm:grid-cols-2">
             <input
               type="text"
               name="name"
@@ -106,11 +106,12 @@ const Appointment = () => {
             <input
               type="time"
               name="time"
+              placeholder="Select Appiontment Time"
               className="w-full px-6 py-3 border-2 outline-none whitespace-nowrap"
               onChange={(e) => setTime(e.target.value)}
             />
             <input
-              type="date"
+               type="date"
               name="date"
               className="w-full px-6 py-3 border-2 outline-none whitespace-nowrap"
               onChange={(e) => setDate(e.target.value)}
@@ -128,7 +129,7 @@ const Appointment = () => {
             <button
               disabled={loading}
               type="submit"
-              className="px-6 py-3 text-lg text-white bg-main hover:bg-green-600"
+              className="px-6 py-3 text-lg text-white rounded-md bg-main hover:bg-green-600 sm:text-xl"
             >
               {loading ? "Booking..." : "Book an Appointent"}
             </button>

@@ -10,6 +10,9 @@ export const Therapies = [
     title1: "Causes Of Chronic Pain:",
     title2: "Symptoms Of Chronic Pain:",
     title3: "Treatments Of Chronic Pain:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Living with chronic pain often requires a multifaceted approach that may involve various treatments, lifestyle adjustments, and emotional support. Engaging with healthcare providers to develop an individualized pain management plan is essential for addressing chronic pain and improving quality of life. Individuals experiencing chronic pain should seek guidance from healthcare professionals to determine the most suitable treatment plan tailored to their specific condition and needs.",
     causes: [
       {
@@ -97,6 +100,9 @@ export const Therapies = [
     title1: "Causes Of Inflammation:",
     title2: "Symptoms Of Inflammation:",
     title3: "Treatments Of Inflammation:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Managing inflammation involves a holistic approach that often includes a combination of medication, lifestyle changes, and, in some cases, medical interventions. Understanding the underlying cause of inflammation and addressing it is crucial in preventing long-term health complications associated with chronic inflammation. Always consult a healthcare professional for guidance and treatment tailored to your specific condition.",
     causes: [
       {
@@ -167,7 +173,7 @@ export const Therapies = [
   },
   {
     id: 2,
-    cover: "joint.jpg",
+    cover: "joint.png",
     type: "Joint Mobility",
     content:
       "Joint mobility itself isn't a medical condition but rather a characteristic that refers to the range of motion",
@@ -176,6 +182,9 @@ export const Therapies = [
     title1: "Causes Of Joint Mobility:",
     title2: "Symptoms Of Joint Mobility:",
     title3: "Improving and Maintaining Joint Mobility:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "If you experience sudden, severe joint pain, significant swelling, or a loss of mobility without an apparent cause, it's essential to seek medical attention for a proper diagnosis and appropriate treatment. Improving and maintaining joint mobility involves a combination of regular movement, exercise, proper posture, and lifestyle habits. Ensuring good joint health is crucial for overall physical well-being and functional capacity.",
     causes: [
       {
@@ -242,7 +251,7 @@ export const Therapies = [
   },
   {
     id: 3,
-    cover: "stroke.png",
+    cover: "stroke.jpg",
     type: "Stroke Rehabilitation",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptas.",
@@ -251,6 +260,9 @@ export const Therapies = [
     title1: "Causes Of Stroke Rehabilitation",
     title2: "Symptoms Of Stroke Rehabilitation",
     title3: "Treatments Of Stroke Rehabilitation",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Stroke rehabilitation is an individualized and ongoing process, and the treatment plan is tailored to each person's specific needs and goals. It's essential for individuals to work closely with a team of healthcare professionals to maximize recovery and regain as much function as possible after a stroke.",
     causes: [
       {
@@ -350,6 +362,9 @@ export const Therapies = [
     title1: "Causes Of Lumbar Spondylosis:",
     title2: "Symptoms Of Lumbar Spondylosis:",
     title3: "Treatments Of Lumbar Spondylosis:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Treatment for lumbar spondylosis focuses on managing symptoms, reducing pain, and improving function. It involves a combination of lifestyle adjustments, physical therapy, and, in some cases, medication to help individuals manage and alleviate discomfort associated with the condition. Always consult a healthcare professional for an accurate diagnosis and appropriate treatment plan tailored to your specific condition.",
     causes: [
       {
@@ -432,8 +447,32 @@ export const Therapies = [
     title1: "Causes Of Sciatica:",
     title2: "Symptoms Of Sciatica:",
     title3: "Treatments Of Sciatica:",
-    note: "",
-    causes: "",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
+    note: "It's essential to consult a healthcare professional to determine the specific cause of sciatica for appropriate treatment and management based on the underlying issue.",
+    causes: [
+      {
+        title: "Herniated Disc (Slipped Disc):",
+        desc: "When the soft inner material of a spinal disc protrudes through the tough outer layer, it can compress the nearby nerve roots, including the sciatic nerve."
+      },
+      {
+        title: " Spinal Stenosis:",
+        desc: "Narrowing of the spinal canal due to factors like aging, bone spurs, or conditions like arthritis can put pressure on the nerve roots, leading to sciatic nerve compression."
+      },
+      {
+        title: "Spondylolisthesis:",
+        desc: "A condition where a vertebra slips forward over the vertebra below it, which may compress the nerve roots and cause sciatic pain."
+      },
+      {
+        title: "Trauma or Injury:",
+        desc: "Injury to the spine or buttocks can result in pressure or damage to the sciatic nerve, leading to pain."
+      },
+      {
+        title: "Other Factors:",
+        desc: "Conditions like diabetes, which can directly damage nerves, or prolonged sitting leading to muscle tightness can also contribute to sciatic nerve irritation."
+      },
+    ],
     symptoms: [
       {
         title: "Pain:",
@@ -473,7 +512,7 @@ export const Therapies = [
   },
   {
     id: 6,
-    cover: "sciatica.jpg",
+    cover: "prolapsed.jpg",
     type: "Prolapsed Disc",
     content:
       "A prolapsed disc, also known as a herniated or slipped disc, occurs when the soft inner gel-like.",
@@ -481,8 +520,36 @@ export const Therapies = [
     title1: "Causes Of Prolapsed Disc:",
     title2: "Symptoms Of Prolapsed Disc:",
     title3: "Treatments Of Prolapsed Disc:",
-    note: "Always consult a healthcare professional for an accurate diagnosis and appropriate treatment plan tailored to your specific condition.",
-    causes: "",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
+    note: "It's essential to consult a healthcare professional to determine the specific cause of prolapsed disc for appropriate treatment and management based on the underlying issue.",
+    causes: [
+      {
+        title: "Age-related Changes:",
+        desc: "As people age, the intervertebral discs lose water content and flexibility, making them more susceptible to tears and herniation."
+      },
+      {
+        title: " Trauma or Injury:",
+        desc: " An injury, such as a fall or sudden impact, can cause a disc to herniate. The pressure from the trauma can force the inner part of the disc through the outer ring."
+      },
+      {
+        title: "Repetitive Stress or Strain:",
+        desc: "Consistent heavy lifting, especially when done with poor posture or improper lifting techniques, can strain the discs and increase the risk of herniation."
+      },
+      {
+        title: " Wear and Tear:",
+        desc: "Long-term wear and tear due to poor posture, sedentary lifestyles, or occupation-related factors can weaken the discs, making them more susceptible to herniation."
+      },
+      {
+        title: "Incorrect Lifting Techniques:",
+        desc: " Lifting heavy objects using improper techniques, such as bending from the waist rather than the knees, can stress the discs and lead to herniation."
+      },
+      {
+        title: "Smoking:",
+        desc: "Smoking may impair the discs' ability to receive proper nutrients, weakening them and increasing the risk of herniation."
+      },
+    ],
     symptoms: [
       {
         title: "Localized Pain::",
@@ -531,6 +598,9 @@ export const Therapies = [
     title1: "Causes Of Spinal Tumors:",
     title2: "Symptoms Of Spinal Tumors:",
     title3: "Treatments Of Spinal Tumors:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "The treatment plan for spinal tumors varies depending on the type, size, location, and the patient's overall health. It often involves a multidisciplinary approach, with input from neurosurgeons, oncologists, radiation oncologists, and other specialists to provide the best possible care and treatment. Early diagnosis and appropriate treatment are crucial for managing spinal tumors and improving outcomes.",
     causes: [
       {
@@ -574,10 +644,6 @@ export const Therapies = [
     ],
     treatment: [
       {
-        title: "Surgery:",
-        desc: "Surgical removal of the tumor is often the primary treatment, especially for accessible tumors that don't pose a high risk of complications.",
-      },
-      {
         title: "Radiation Therapy:",
         desc: "High-energy beams to destroy cancer cells or reduce tumor size.",
       },
@@ -597,11 +663,15 @@ export const Therapies = [
         title: "Pain Management:",
         desc: "Medications and other interventions to manage pain associated with the tumor.",
       },
+      {
+        title: "Surgery:",
+        desc: "Surgical removal of the tumor is often the primary treatment, especially for accessible tumors that don't pose a high risk of complications.",
+      },
     ],
   },
   {
     id: 8,
-    cover: "cyst.jpg",
+    cover: "baker.jpg",
     type: "Baker's Cyst",
     content:
       "A Baker's cyst, also known as a popliteal cyst, is a fluid-filled swelling that develops behind the knee.",
@@ -610,6 +680,9 @@ export const Therapies = [
     title1: "Causes Of Baker's Cyst",
     title2: "Symptoms Of Baker's Cyst",
     title3: "Treatments Of Baker's Cyst",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Treatment for Baker's cyst aims to address the underlying knee condition and alleviate symptoms. Rehabilitation often involves a combination of rest, lifestyle modifications, and, in some cases, medical interventions. Following a healthcare professional's guidance is crucial to ensure appropriate management and to prevent the recurrence of a Baker's cyst.",
     causes: [
       {
@@ -672,7 +745,7 @@ export const Therapies = [
   },
   {
     id: 9,
-    cover: "cyst.jpg",
+    cover: "injury.jpg",
     type: "Sport Injury Rehabilitation",
     content:
       "Sports injury rehabilitation aims to restore athletes to their previous level of activity or performance following an injury.",
@@ -681,6 +754,9 @@ export const Therapies = [
     title1: "Sport Injury Rehabilitation Process:",
     title2: "Symptoms depend on the type of injury and can include:",
     title3: "Treatment (Sports Injury Rehabilitation):",
+    toggle1: "Process",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Sports injury rehabilitation is a comprehensive process that aims to heal the injury, restore function, and prevent future issues. It involves collaboration between the injured individual and healthcare professionals such as physiotherapists, sports medicine physicians, athletic trainers, and strength and conditioning coaches. The treatment plan is tailored to the specific injury, individual needs, and the demands of the sport or activity.",
     causes: [
       {
@@ -764,6 +840,9 @@ export const Therapies = [
     title1: "Importance of Spine Care:",
     title2: "Preventive Measures for Spine Health:",
     title3: "Common Spine Conditions and Disorders:",
+    toggle1: "Benefit",
+    toggle2: "Measures",
+    toggle3: "Condition",
     note: "Ensuring good spine care involves a comprehensive approach that includes prevention, early intervention, and appropriate treatments to address spinal conditions and maintain spinal health. Individuals experiencing spinal issues should seek guidance from healthcare professionals to receive an accurate diagnosis and the most suitable treatment plan.",
     causes: [
       {
@@ -839,6 +918,9 @@ export const Therapies = [
     title1: "Causes Of Wrist Drop:",
     title2: "Symptoms Of Wrist Drop:",
     title3: "Treatments Of Wrist Drop:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Recovery from wrist drop depends on the severity of the nerve injury. Some cases may resolve spontaneously over time, while others might require more intensive treatment and rehabilitation. Physical therapy and exercises play a crucial role in improving strength and restoring function in cases of nerve damage leading to wrist drop.",
     causes: [
       {
@@ -897,7 +979,7 @@ export const Therapies = [
   },
   {
     id: 12,
-    cover: "slide2.webp",
+    cover: "massage.jpeg",
     type: "Massage Therapy",
     content:
       "Massage therapy is a hands-on practice that involves manipulating soft tissues of the body to promote health and well-being.",
@@ -906,6 +988,9 @@ export const Therapies = [
     title1: "Benefits of Massage Therapy:",
     title2: "Applications of Massage Therapy:",
     title3: "Massage Therapy Considerations:",
+    toggle1: "Benefit",
+    toggle2: "Wellness",
+    toggle3: "Safety",
     note: "Massage therapy can be a valuable addition to an individual's wellness routine, offering various physical and mental health benefits. Consulting a qualified massage therapist and discussing personal health concerns is essential for a safe and beneficial massage experience.",
     causes: [
       {
@@ -972,7 +1057,7 @@ export const Therapies = [
   },
   {
     id: 13,
-    cover: "slide1.jpeg",
+    cover: "Osteoarthritis.jpg",
     type: "Osteoarthritis",
     content:
       "Osteoarthritis is a degenerative joint disease that results from the breakdown of joint cartilage and underlying bone.",
@@ -980,6 +1065,9 @@ export const Therapies = [
     title1: "Causes Of Osteoarthritis:",
     title2: "Symptoms Of Osteoarthritis:",
     title3: "Treatments Of Osteoarthritis:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "While there is no cure for osteoarthritis, various treatments can help manage the symptoms and improve the quality of life for individuals affected by the condition. It's essential to work with healthcare professionals to develop a comprehensive treatment plan tailored to the individual's specific needs.",
     causes: [
       {
@@ -1058,7 +1146,7 @@ export const Therapies = [
   },
   {
     id: 14,
-    cover: "slide2.webp",
+    cover:"arthritis.png",
     type: "Rheumatoid Arthritis",
     content:
       "Rheumatoid arthritis is a chronic condition without a known cure, but treatment can effectively manage symptoms,",
@@ -1066,6 +1154,9 @@ export const Therapies = [
     title1: "Causes Of Rheumatoid Arthritis:",
     title2: "Symptoms Of Rheumatoid Arthritis:",
     title3: "Treatments Of Rheumatoid Arthritis:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Rheumatoid arthritis is a chronic condition without a known cure, but treatment can effectively manage symptoms, slow disease progression, and improve the quality of life for individuals affected by the disease. Early diagnosis and a comprehensive treatment plan tailored to each individual's needs are crucial in managing RA. Consulting with a healthcare professional, typically a rheumatologist, is essential for proper diagnosis and ongoing management.",
     causes: [
       {
@@ -1136,7 +1227,7 @@ export const Therapies = [
   },
   {
     id: 15,
-    cover: "slide2.webp",
+    cover: "care.jpeg",
     type: "Aged Day Care",
     content:
       "Aged day care, also known as adult day care, is a care option designed for older adults who require assistance,",
@@ -1145,24 +1236,68 @@ export const Therapies = [
     title1: "Objectives of Aged Day Care:",
     title2: " Services Offered in Aged Day Care:",
     title3: "Benefits of Aged Day Care:",
+    toggle1: "Objective",
+    toggle2: "Service",
+    toggle3: "Benefit",
     note: "Aged day care offers a supportive environment for older adults, providing social, emotional, and physical engagement, as well as essential respite for family caregivers. Families should consider the specific needs of their loved ones and the services provided by different facilities when choosing an aged day care center.",
-    causes: "",
+    causes: [
+      {
+        title: "Socialization:",
+        desc: "Provides a setting for seniors to interact with others, reducing isolation and loneliness.",
+      },
+      {
+        title: "Supervision and Support:",
+        desc: "Offers a safe and supervised environment for those who may need assistance or monitoring during the day.",
+      },
+      {
+        title: "Activities and Therapy:",
+        desc: " Engages seniors in various activities, including exercise, mental stimulation, and therapeutic programs.",
+      },
+      {
+        title: "Respite for Caregivers:",
+        desc: "Allows family members or caregivers to attend work or have personal time while ensuring the older adult's care and safety.",
+      },
+    ],
     symptoms: [
       {
-        title: "",
-        desc: "",
+        title: "Social Activities:",
+        desc: "Group games, crafts, discussions, and entertainment to encourage interaction.",
+      },
+      {
+        title: "Meals and Snacks:",
+        desc: "Nutritious meals and snacks are often provided during the day.",
+      },
+      {
+        title: "Health Monitoring:",
+        desc: "Basic health services like blood pressure checks, medication management, or assistance with personal care.",
+      },
+      {
+        title: "Therapeutic Programs:",
+        desc: "Activities tailored to address physical, mental, or emotional needs, including exercise, music therapy, and memory enhancement programs.",
       },
     ],
     treatment: [
       {
-        title: "",
-        desc: "",
+        title: "Maintaining Independence:",
+        desc: "Offers a balance between independence and care for seniors.",
+      },
+      {
+        title: "Stimulation and Engagement:",
+        desc: "Provides mental and physical activities, promoting well-being.",
+      },
+      {
+        title: "Respite for Caregivers:",
+        desc: "Allows family caregivers to have time for work or personal activities while ensuring the well-being of their loved ones.",
+      },
+      {
+        title: "Safety and Supervision:",
+        desc: "Offers a safe environment with staff supervision.",
       },
     ],
   },
   {
     id: 16,
-    cover: "slide2.webp",
+    cover: "inpatient.png",
     type: "Inpatient Rehabilitation",
     content:
       "Inpatient rehabilitation is designed to provide intensive, coordinated care and therapy to help individuals recover,",
@@ -1170,6 +1305,9 @@ export const Therapies = [
     title1: "Causes Of Inpatient Rehabilitation:",
     title2: "Symptoms Of Inpatient Rehabilitation:",
     title3: "Treatments Of Inpatient Rehabilitation:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Inpatient rehabilitation is designed to provide intensive, coordinated care and therapy to help individuals recover, regain function, and improve their quality of life following serious injuries or health conditions. The treatment plan is personalized to the specific needs of each individual and is aimed at maximizing their recovery potential.",
     causes: [
       {
@@ -1252,7 +1390,7 @@ export const Therapies = [
   },
   {
     id: 17,
-    cover: "slide2.webp",
+    cover: "lowerPain.jpg",
     type: "Lower Spine Pain",
     content:
       "Lower spine pain, often referred to as lower back pain or lumbar pain, can have various causes, symptoms, and treatments. Here's an overview:",
@@ -1260,6 +1398,9 @@ export const Therapies = [
     title1: "Causes Of Lower Spine Pain:",
     title2: "Symptoms Of Lower Spine Pain:",
     title3: "Treatments Of Lower Spine Pain:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Always consult a healthcare professional for proper diagnosis and an appropriate treatment plan tailored to your specific condition.",
     causes: [
       {
@@ -1350,7 +1491,7 @@ export const Therapies = [
   },
   {
     id: 18,
-    cover: "slide2.webp",
+    cover: "upperpain.jpeg",
     type: "Upper Spine Pain",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptas.",
@@ -1359,6 +1500,9 @@ export const Therapies = [
     title1: "Causes Of Upper Spine Pain:",
     title2: "Symptoms Of Upper Spine Pain:",
     title3: "Treatments Of Upper Spine Pain:",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "Always seek guidance from a healthcare professional to accurately diagnose the cause of upper spine pain and to determine the most suitable treatment plan.",
     causes: [
       {
@@ -1457,6 +1601,9 @@ export const Therapies = [
     title1: "Causes Of",
     title2: "Symptoms Of",
     title3: "Treatments Of",
+    toggle1: "Causes",
+    toggle2: "Symptoms",
+    toggle3: "Treatment",
     note: "",
     causes: "",
     symptoms: [

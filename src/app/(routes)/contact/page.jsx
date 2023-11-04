@@ -10,12 +10,12 @@ export const metadata = {
 
 const Contact = () => {
   return (
-    <div className="w-full h-full max-w-7xl mx-auto py-14 px-3 sm:px-4">
+    <div className="w-full h-full px-3 mx-auto max-w-7xl py-14 sm:px-4">
      <HeadTitle path="Contact" title="Contact Us" />
-      <header className="py-6 font-semibold text-center text-xl leading-8">
+      <header className="py-6 text-2xl leading-8 text-center nt-medium sm">
         GET IN TOUCH WITH REVIVE PHYSIOTHERAPY - GHANA
       </header>
-      <div className="grid sm:grid-cols-2  lg:grid-cols-3  gap-y-14 gap-x-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-6">
         <div className="w-full sm:col-span-1 lg:col-span-2">
           <Address />
         </div>

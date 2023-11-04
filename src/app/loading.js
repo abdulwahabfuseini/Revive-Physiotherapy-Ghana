@@ -17,8 +17,8 @@ const Loading = ({ children }) => {
   return (
     <div>
       {isLoading ? (
-        <div className="w-full h-screen flex items-center justify-center bg-main bg-opacity-30 bottom-0 left-0 right-0 absolute">
-          <div className="relative">
+        <div className="w-full h-screen flex items-center justify-center bg-gray-200 bottom-0 left-0 right-0 absolute">
+          <div className="relative shadow-md rounded-full">
             <Oval
               ariaLabel="loading-indicator"
               height={100}

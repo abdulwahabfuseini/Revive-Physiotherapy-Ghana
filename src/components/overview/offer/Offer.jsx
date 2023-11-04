@@ -16,13 +16,13 @@ const Offer = () => {
 
   return (
     <div className="py-8">
-      <div className="grid sm:grid-cols-2">
+      <div className="grid gap-2 sm:grid-cols-2">
         <div>
           <header className="text-3xl text-main">
             Physiotherapy Services at Revive
           </header>
           <div className="flex items-center gap-3 py-3">
-            <h1 className="font-medium text-green-600 uppercase ">
+            <h1 className="font-semibold text-green-600 uppercase ">
               Physiotherapy Services
             </h1>
             <span className="w-16 h-[1.8px] bg-green-600"></span>

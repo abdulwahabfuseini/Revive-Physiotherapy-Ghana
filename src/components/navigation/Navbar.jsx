@@ -3,8 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Image from "next/image";
-import Logo from "../../../public/images/logo.jpeg";
-import logo from "../../../public/images/logo.png";
+import Logo from "../../../public/images/revive.jpg";
 import { Naviagte } from "@/assets/Navigate";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
@@ -29,19 +28,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Link href="/">
             <div className="flex items-center gap-2">
-              {sticky ? (
-                <Image
-                  src={logo}
-                  alt="logo"
-                  className="w-14 h-14 object-contain"
-                />
-              ) : (
-                <Image
-                  src={Logo}
-                  alt="logo"
-                  className="w-14 h-14 object-contain"
-                />
-              )}
+              <Image
+                src={Logo}
+                alt="logo"
+                className="w-14 h-14 object-contain shadow-sm rounded-full p-[0.6px]"
+              />
               <h1 className="sm:text-lg font-semibold ">
                 REVIVE PHYSIOTHERAPY <br /> GHANA
               </h1>
@@ -49,7 +40,7 @@ const Navbar = () => {
           </Link>
           <ul className="lg:flex items-center gap-8 hidden">
             {Naviagte.map((navLink) => (
-              <li className="text-lg font-semibold" key={navLink.id}>
+              <li className="text-xl font-semibold" key={navLink.id}>
                 <Link href={navLink.path}>{navLink.display}</Link>
               </li>
             ))}

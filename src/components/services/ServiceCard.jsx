@@ -9,7 +9,7 @@ const ServiceCard = ({ therapy }) => {
   return (
     <div>
       <Link href={`/service/${therapy?.id}`}>
-        <div className="pb-3 bg-white hover:shadow-lg">
+        <div className="pb-2 bg-white hover:shadow-lg">
           <Image
             src={`/images/${therapy.cover}`}
             alt=""
@@ -18,10 +18,9 @@ const ServiceCard = ({ therapy }) => {
             className="object-cover h-40 "
           />
           <div className="grid p-3 gap-y-2 place-items-center">
-            <h1 className="text-xl font-medium">{therapy.type}</h1>
-           
+            <h1 className="text-xl font-semibold">{therapy.type}</h1>
             <Typography.Paragraph
-              className="text-base break-word"
+              className="text-lg break-word"
               ellipsis={{
                 rows: 2,
                 expandable: true,
