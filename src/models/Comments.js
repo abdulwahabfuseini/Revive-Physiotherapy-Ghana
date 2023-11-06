@@ -1,8 +1,8 @@
-const { Schema, models, model } = require("mongoose");
+import { Schema, models, model } from "mongoose"
 
-const PostSchema = new Schema(
+const CommentSchema = new Schema(
   {
-    name: {
+    fullname: {
       type: String,
       required: true,
     },
@@ -10,7 +10,7 @@ const PostSchema = new Schema(
       type: String,
       required: true,
     },
-    image: {
+    picture: {
       type: String,
       required: true,
     },
@@ -22,6 +22,6 @@ const PostSchema = new Schema(
   { timestamps: true }
 );
 
-const Post = models.Post || model("Post", PostSchema);
+const Comments = models.Comments || model("Comments", CommentSchema);
 
-export default Post;
+export default Comments;

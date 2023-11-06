@@ -8,7 +8,7 @@ import Link from "next/link";
 const ServiceCard = ({ therapy }) => {
   return (
     <div>
-      <Link href={`/service/${therapy?.id}`}>
+      <Link href={`/service/${therapy?.type}`}>
         <div className="pb-2 bg-white hover:shadow-lg">
           <Image
             src={`/images/${therapy.cover}`}

@@ -12,27 +12,28 @@ const Background = () => {
   return (
     <>
       <HeadTitle path="About" title="Who we are" />
-      <div className="flex flex-col items-center my-6 sm:flex-row gap-x-10 gap-y-16 ">
-        <div className="w-full space-y-3 sm:w-1/2">
-          <h1 className="text-2xl uppercase">Background</h1>
-          <p className="text-justify break-words ">
-            accusamus, unde laborum impedit soluta aperiam! Sequi vero harum
-            sunt provident iure praesentium facere quidem distinctio maiores aut
-            debitis natus quisquam impedit perferendis odio adipisci illo est ab
-            corporis suscipit rem, reprehenderit nobis perspiciatis. Esse,
-            libero! Cupiditate ea voluptatibus architecto impedit magni tempora
-            tenetur?
+      <div className="flex flex-col lg:items-center my-6 lg:flex-row gap-x-10 gap-y-16 ">
+        <div className="w-full space-y-3 lg:w-1/2">
+          <p className="break-words text-lg">
+            Welcome to Revive PhysioTherapy - Ghana, We are a specialized team
+            of physiotherapists with the energy, experience and enthusiasm to
+            achieve the very best results for all patients regardless of age or
+            problem. we offer home and private sessions that can be arranged
+            through booking. We are committed to
+            guiding you on your path to recovery, empowering you to live life to
+            the fullest.
           </p>
-          <p className="text-lg text-justify break-words">
-            accusamus, unde laborum impedit soluta aperiam! Sequi vero harum
-            sunt provident iure praesentium facere quidem distinctio maiores aut
-            debitis natus quisquam impedit perferendis odio adipisci illo est ab
-            corporis suscipit rem, reprehenderit nobis perspiciatis. Esse,
-            libero! Cupiditate ea voluptatibus architecto impedit magni tempora
-            tenetur?
+          <p className="text-lg break-words">
+           At Revive Physiotherapy - Ghana,  we specialize in restoring
+            movement, enhancing function, and promoting overall well-being. With
+            a dedicated team of experienced physiotherapists, we offer
+            personalized care tailored to your unique needs. Our practice
+            focuses on evidence-based treatments, utilizing a range of therapies
+            and exercises to help you regain mobility, manage pain, and improve
+            your quality of life.  
           </p>
         </div>
-        <div className="w-full sm:w-1/2">
+        <div className="w-full lg:w-1/2">
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
@@ -50,7 +51,7 @@ const Background = () => {
                       width={600}
                       height={40}
                       src={`/images/${item.cover}`}
-                      className="object-cover h-48 sm:h-72"
+                      className="object-cover w-full h-48 sm:h-72"
                       alt="banner"
                     />
                   </SwiperSlide>

@@ -14,19 +14,19 @@ const Physiotherapy = ({ treatments }) => {
     <div>
       <div>
         <header className="py-5 text-xl font-semibold text-center uppercase sm:py-10 sm:text-3xl">
-          {treatments.type}
+          {treatments?.type}
         </header>
         <div className="grid gap-8 sm:grid-cols-3">
           <div className="relative h-80 sm:h-[550px] border-2 w-full rounded border-gray-50  sm:col-span-1 order-2 sm:order-1">
             <Image
               fill
-              src={`/images/${treatments.cover}`}
-              className="object-cover "
+              src={`/images/${treatments?.cover}`}
+              className="object-cover"
               alt="service"
             />
           </div>
           <div className="order-1 w-full text-lg sm:col-span-2 sm:order-2">
-            <h1>{treatments.description}</h1>
+            <p>{treatments?.description}</p>
             <div className="grid max-w-sm grid-cols-3 gap-3 p-1 mx-auto my-5 bg-white rounded-lg shadow-sm">
               <button
                 onClick={() => toggleButton(1)}
@@ -36,7 +36,7 @@ const Physiotherapy = ({ treatments }) => {
                     : "bg-white sm:bg-transparent text-black rounded-lg p-1.5 sm:text-lg font-medium"
                 }
               >
-                {treatments.toggle1}
+                {treatments?.toggle1}
               </button>
               <button
                 onClick={() => toggleButton(2)}
@@ -46,7 +46,7 @@ const Physiotherapy = ({ treatments }) => {
                     : "bg-white sm:bg-transparent text-black rounded-lg p-1.5 sm:text-lg font-medium"
                 }
               >
-                {treatments.toggle2}
+                {treatments?.toggle2}
               </button>
               <button
                 onClick={() => toggleButton(3)}
@@ -56,15 +56,15 @@ const Physiotherapy = ({ treatments }) => {
                     : "bg-white sm:bg-transparent text-black rounded-lg p-1.5 sm:text-lg font-medium"
                 }
               >
-                {treatments.toggle3}
+                {treatments?.toggle3}
               </button>
             </div>
             {toggleTab === 1 && (
               <div>
                 <h1 className="py-3 text-xl font-semibold uppercase">
-                  {treatments.title1}
+                  {treatments?.title1}
                 </h1>
-                {treatments.causes.map((cause, index) => (
+                {treatments?.causes.map((cause, index) => (
                   <ul key={index} className="mx-8 list-disc">
                     <li className="text-[17px] py-1 font-bold">
                       {cause?.title}{" "}
@@ -77,9 +77,9 @@ const Physiotherapy = ({ treatments }) => {
             {toggleTab === 2 && (
               <div>
                 <h1 className="py-3 text-xl font-semibold uppercase">
-                  {treatments.title2}
+                  {treatments?.title2}
                 </h1>
-                {treatments.symptoms.map((symptom, index) => (
+                {treatments?.symptoms.map((symptom, index) => (
                   <ul key={index} className="mx-8 list-disc">
                     <li className="text-[17px] py-1 font-bold">
                       {symptom?.title}{" "}
@@ -92,9 +92,9 @@ const Physiotherapy = ({ treatments }) => {
             {toggleTab === 3 && (
               <div>
                 <h1 className="py-3 text-xl font-semibold uppercase">
-                  {treatments.title3}
+                  {treatments?.title3}
                 </h1>
-                {treatments.treatment.map((treat, index) => (
+                {treatments?.treatment.map((treat, index) => (
                   <ul key={index} className="mx-8 list-disc">
                     <li className="text-[17px] py-1 font-bold">
                       {treat?.title}{" "}

@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <div className="w-full h-full px-3 mx-auto max-w-7xl py-14 sm:px-4">
      <HeadTitle path="Contact" title="Contact Us" />
-      <header className="py-6 text-2xl leading-8 text-center nt-medium sm">
+      <header className="py-6 text-2xl leading-8 text-center font-smeibold">
         GET IN TOUCH WITH REVIVE PHYSIOTHERAPY - GHANA
       </header>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-6">

@@ -1,9 +1,7 @@
-const { Schema, models, model } = require("mongoose");
-
-
+import { Schema, models, model } from "mongoose"
 
 const BookingSchema = new Schema({
-    name: {
+    fullname: {
         type: String,
         required: true
     },
@@ -27,8 +25,12 @@ const BookingSchema = new Schema({
         type: String,
         required: true
     },
+    purpose: {
+        type: String,
+        required: true
+    },
 }, {timestamps: true})
 
-const Booking = models.Booking || model("Booking", BookingSchema)
+const Bookings = models.Bookings || model("Bookings", BookingSchema)
 
-export default Booking
+export default Bookings

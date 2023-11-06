@@ -48,7 +48,7 @@ const Banner = () => {
           <h4 className="hidden py-2 text-3xl uppercase sm:block">
             <span>{text}</span> <Cursor />
           </h4>
-          <h4 className="py-2 text-3xl uppercase sm:hidden font-medium">
+          <h4 className="py-2 text-2xl sm:text-3xl uppercase sm:hidden font-medium">
             Revive Physiotherapy - Ghana
           </h4>
           <p className="w-full mb-6 text-lg sm:text-xl max-w-lg">

@@ -1,6 +1,6 @@
 export const Therapies = [
   {
-    id: 0,
+    id: 1,
     cover: "chronic.jpg",
     type: "Chronic Pain",
     content:
@@ -90,7 +90,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     cover: "inflamm.png",
     type: "Inflammation",
     content:
@@ -172,7 +172,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     cover: "joint.png",
     type: "Joint Mobility",
     content:
@@ -250,7 +250,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     cover: "stroke.jpg",
     type: "Stroke Rehabilitation",
     content:
@@ -352,7 +352,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     cover: "Lumbar.jpg",
     type: "Lumbar Spondylosis",
     content:
@@ -438,7 +438,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     cover: "sciatica.jpg",
     type: "Sciatica",
     content:
@@ -511,7 +511,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     cover: "prolapsed.jpg",
     type: "Prolapsed Disc",
     content:
@@ -588,7 +588,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     cover: "spinal.png",
     type: "Spinal Tumors",
     content:
@@ -670,7 +670,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     cover: "baker.jpg",
     type: "Baker's Cyst",
     content:
@@ -744,7 +744,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     cover: "injury.jpg",
     type: "Sport Injury Rehabilitation",
     content:
@@ -830,7 +830,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     cover: "spine.png",
     type: "Spine Care",
     content:
@@ -908,7 +908,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     cover: "wrist.jpg",
     type: "Wrist Drop",
     content:
@@ -978,7 +978,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     cover: "massage.jpeg",
     type: "Massage Therapy",
     content:
@@ -1056,7 +1056,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     cover: "Osteoarthritis.jpg",
     type: "Osteoarthritis",
     content:
@@ -1145,7 +1145,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     cover:"arthritis.png",
     type: "Rheumatoid Arthritis",
     content:
@@ -1226,7 +1226,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     cover: "care.jpeg",
     type: "Aged Day Care",
     content:
@@ -1296,7 +1296,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 16,
+    id: 17,
     cover: "inpatient.png",
     type: "Inpatient Rehabilitation",
     content:
@@ -1389,7 +1389,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 17,
+    id: 18,
     cover: "lowerPain.jpg",
     type: "Lower Spine Pain",
     content:
@@ -1490,7 +1490,7 @@ export const Therapies = [
     ],
   },
   {
-    id: 18,
+    id: 19,
     cover: "upperpain.jpeg",
     type: "Upper Spine Pain",
     content:
@@ -1588,34 +1588,6 @@ export const Therapies = [
       {
         title: "Surgery:",
         desc: "Surgical intervention is rarely necessary for upper back pain and is typically considered only in severe cases, such as trauma or specific spinal conditions.",
-      },
-    ],
-  },
-  {
-    id: 19,
-    cover: "slide2.webp",
-    type: "Inpatient Rehabilitation",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptas.",
-    description: "",
-    title1: "Causes Of",
-    title2: "Symptoms Of",
-    title3: "Treatments Of",
-    toggle1: "Causes",
-    toggle2: "Symptoms",
-    toggle3: "Treatment",
-    note: "",
-    causes: "",
-    symptoms: [
-      {
-        title: "",
-        desc: "",
-      },
-    ],
-    treatment: [
-      {
-        title: "",
-        desc: "",
       },
     ],
   },

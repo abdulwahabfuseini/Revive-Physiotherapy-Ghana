@@ -1,61 +1,60 @@
 "use client";
 
-import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
+import { useState } from "react";
 
-const ContactForm = () => {
+const Rate = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-  const [contact, setContact] = useState({
-    name: "",
+  const [details, setDetails] = useState({
+    fullname: "",
     email: "",
-    phoneNumber: "",
-    message: "",
+    picture: "",
+    description: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
+    setDetails({ ...details, [name]: value });
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = async (values) => {
     setLoading(true);
-    emailjs
-      .send(
-        "service_gs10gm9",
-        "template_yx6nr4d",
-        {
-          name: contact.name,
-          email: contact.email,
-          phoneNumber: contact.phoneNumber,
-          message: contact.message,
+    try {
+      const res = await fetch("/api/posts", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        "F28Qpp5OtNL5ltm-t"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert(
-            "Thanks for contacting Revive Physiotherapy - Ghana, We will get back to you as soon as possible. Stay Bless!!!"
-          );
-          setContact();
-          form.resetFields();
-        },
-        (error) => {
-          setLoading(false);
-          alert("oops!!! Something went wrong");
-        }
-      );
+        body: JSON.stringify(details),
+      });
+      if (res.ok) {
+        form.resetFields();
+      }
+    } catch (error) {
+      alert("Oooop!!! Something went wrong. Please try again");
+    } finally {
+      setLoading(false);
+    }
   };
-
   return (
-    <div className="w-full h-full">
-      <h3 className="pb-4 text-2xl text-center">Leave a Message</h3>
+    <div className="grid gap-5 py-3 sm:grid-cols-2 gap-y-6">
+      <div>
+        <header className="text-3xl capitalize text-main">
+          Rate our performance by providing your details
+        </header>
+        <div className="flex items-center gap-3 py-3">
+          <h1 className="font-semibold text-green-600 uppercase ">
+            Say Something About Revive
+          </h1>
+          <span className="w-16 h-[1.8px] bg-green-600 "></span>
+        </div>
+      </div>
       <Form onFinish={handleSubmit} form={form}>
         <Form.Item
-          name="name"
+          name="fullname"
           rules={[
             {
               required: true,
@@ -66,7 +65,7 @@ const ContactForm = () => {
         >
           <Input
             placeholder="Enter Full Name"
-            name="name"
+            name="fullname"
             onChange={handleChange}
             className="w-full text-lg border-2 cursor-pointer h-14"
             type="text"
@@ -92,36 +91,36 @@ const ContactForm = () => {
           />
         </Form.Item>
         <Form.Item
-          name="phoneNumber"
+          name="picture"
           rules={[
             {
               required: true,
-              message: "Please Enter Phone Number",
+              message: "Please Select Image",
             },
           ]}
           hasFeedback
         >
           <Input
-            type="tel"
-            placeholder="Enter Phone Number"
-            name="phoneNumber"
+            type="file"
+            name="picture"
             onChange={handleChange}
-            className="w-full py-2 text-lg border-2 cursor-pointer h-14"
+            accept=".jpg,.png,.jpeg"
+            className="bg-gray-100 border-none"
           />
         </Form.Item>
         <Form.Item
-          name="message"
+          name="description"
           rules={[
             {
               required: true,
-              message: "Please Enter message",
+              message: "Please Enter Description",
             },
           ]}
         >
           <TextArea
             type="text"
-            placeholder="Enter Message"
-            name="message"
+            placeholder="Say Something about Revive"
+            name="description"
             onChange={handleChange}
             className="w-full py-2 text-lg border-2 cursor-pointer"
           />
@@ -129,13 +128,13 @@ const ContactForm = () => {
         <Button
           htmlType="submit"
           type="primary"
-          className="w-full my-4 text-xl cursor-pointer h-14 bg-main"
+          className=" my-2 text-xl cursor-pointer h-12 bg-main"
         >
-          {loading ? "Sending..." : "Send Message"}
+          {loading ? "Submitting..." : "Submit"}
         </Button>
       </Form>
     </div>
   );
 };
 
-export default ContactForm;
+export default Rate;

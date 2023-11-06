@@ -6,7 +6,7 @@ import Social from "./connect/Social";
 const Footer = () => {
   return (
     <div className="w-full h-full bg-white">
-      <div className="grid gap-6 px-4 py-10 mx-auto max-w-7xl sm:px-4 grid-auto-fit sm:place-items-center ">
+      <div className="grid gap-5 px-4 py-10 mx-auto max-w-7xl sm:px-5 grid-auto-fit lg:place-items-center ">
         <div>
           <Link href="/">
             <div className="flex items-center gap-2">
@@ -20,7 +20,7 @@ const Footer = () => {
               </h1>
             </div>
           </Link>
-          <h1 className="text-lg font-medium"><span className="font-semibold">Motto:</span> Yes We Revive!!!</h1>
+          <p className="text-xl font-medium p-3"><span className="font-semibold">Motto:</span> Yes We Revive!!!</p>
         </div>
         <div>
           <h1 className="mb-3 text-xl font-semibold uppercase">Quick Links</h1>
@@ -38,7 +38,7 @@ const Footer = () => {
               <Link href="/contact">Contact Us</Link>
             </li>
             <li className="text-xl hover:text-green-500 hover:underline">
-              <Link href="/blog">Our Blog</Link>
+              <Link href="/booking">Book Appointment</Link>
             </li>
           </ul>
         </div>
