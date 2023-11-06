@@ -38,7 +38,7 @@ const Appointment = () => {
             type="submit"
             className="px-6 py-3 my-6 text-lg text-white rounded-md bg-main hover:bg-green-600 sm:text-xl"
           >
-            Book an Appointent
+            Book an Appointment
           </button>
         </Link>
       </div>
