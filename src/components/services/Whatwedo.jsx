@@ -23,7 +23,7 @@ const Whatwedo = () => {
             plans.
           </p>
         </div>
-        <div className="grid w-full gap-3 py-4 grid-auto-fit">
+        <div className="grid w-full gap-3 py-4 grid-auto-fit-sm lg:grid-auto-fit">
           {Therapies.map((therapy, index) => {
             return <ServiceCard key={index} therapy={therapy} />;
           })}

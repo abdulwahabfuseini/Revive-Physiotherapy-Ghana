@@ -2,7 +2,6 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Therapies } from "../../services/Data";
@@ -25,7 +24,7 @@ const Offer = () => {
             <h1 className="font-semibold text-green-600 uppercase ">
               Physiotherapy Services
             </h1>
-            <span className="w-16 h-[1.8px] bg-green-600"></span>
+            <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
           </div>
         </div>
         <div>

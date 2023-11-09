@@ -17,7 +17,7 @@ const MobileNav = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.2,
+        delay: 0.3,
        
       },
     },
@@ -37,8 +37,8 @@ const MobileNav = () => {
         initial="hidden"
         animate={openNav ? "visible" : "hidden"}
         className={`${
-          openNav ? "right-0" : "right-full"
-        } fixed top-20 grid w-full text-background transition-all duration-500 bg-main text-white`}
+          openNav ? "top-20" : "-top-96"
+        } fixed right-0 grid w-full text-background transition-all duration-500 bg-main text-white`}
       >
         {Naviagte.map((navLink) => (
           <li key={navLink.id} className="font-semibold cursor-pointer">

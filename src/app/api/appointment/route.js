@@ -5,23 +5,18 @@ import { NextResponse } from "next/server";
 export const POST = async (req) => {
   try {
     await connectMongoDB();
-    const { fullname, email, phoneNumber, subject, time, date, purpose } =
+    const { fullname, email, phoneNumber, gender, time, date, address, city, purpose } =
       await req.json();
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ purpose:", purpose);
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ fullname:", fullname);
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ email:", email);
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ phoneNumber:", phoneNumber);
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ subject:", subject);
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ time:", time);
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ date:", date);
 
     const appiontment = new Bookings({
       fullname,
       email,
       phoneNumber,
-      subject,
+      gender,
       time,
       date,
+      address,
+      city,
       purpose,
     });
 

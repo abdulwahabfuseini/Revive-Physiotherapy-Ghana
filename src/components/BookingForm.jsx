@@ -1,8 +1,10 @@
 "use client";
 
-import { Button, Form, Input } from "antd";
+import { Button, DatePicker, Form, Input, Select, TimePicker } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { useState } from "react";
+// import moment from 'moment';
+// import 'antd/dist/antd.css';
 
 const BookingForm = () => {
   const [form] = Form.useForm();
@@ -11,12 +13,20 @@ const BookingForm = () => {
     fullname: "",
     email: "",
     phoneNumber: "",
-    subject: "",
+    gender: "",
+    address: "",
+    city: "",
     time: "",
     date: "",
     purpose: "",
   });
 
+  
+
+  const handleValue = (value) => {
+    console.log(value);
+  };
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBookingDetails({ ...bookingDetails, [name]: value });
@@ -42,10 +52,18 @@ const BookingForm = () => {
       setLoading(false);
     }
   };
+
+  // const customLocale = {
+  //   lang: {
+  //     ok: 'Select', 
+  //   },
+    
+  // };
+  
   return (
-    <div className="py-8 max-w-4xl mx-auto sm:px-4 px-3">
+    <div className="max-w-4xl px-3 py-8 mx-auto sm:px-4">
       <div>
-        <h1 className="text-2xl sm:text-4xl py-4 text-center">Booking Form</h1>
+        <h1 className="pb-8 text-2xl text-center uppercase sm:text-4xl">Medical Appointment Form</h1>
         <Form onFinish={handleSubmit} form={form}>
           <div className="grid sm:grid-cols-2 gap-x-3">
             <Form.Item
@@ -104,7 +122,46 @@ const BookingForm = () => {
               />
             </Form.Item>
             <Form.Item
-              name="subject"
+              name="gender"
+              rules={[
+                {
+                  required: true,
+                  message: "Please Select Gender",
+                },
+              ]}
+              hasFeedback
+            >
+              <Select
+                size="large"
+                className="w-full text-lg cursor-pointer"
+                labelInValue
+                name="gender"
+                defaultValue={{
+                  value: "Select Gender",
+                  label: "Select Gender",
+                }}
+                style={{
+                  width: "100%",
+                }}
+                onChange={handleValue}
+                options={[
+                  {
+                    value: "Male",
+                    label: "Male",
+                  },
+                  {
+                    value: "Female",
+                    label: "Female",
+                  },
+                  {
+                    value: "Prefer ot to say",
+                    label: "Prefer ot to say",
+                  },
+                ]}
+              />
+            </Form.Item>
+            <Form.Item
+              name="time"
               rules={[
                 {
                   required: true,
@@ -113,29 +170,15 @@ const BookingForm = () => {
               ]}
               hasFeedback
             >
-              <Input
-                type="text"
-                name="subject"
-                placeholder="Enter Subject"
-                onChange={handleChange}
-                className="w-full py-2 text-lg border-2 cursor-pointer h-14"
-              />
-            </Form.Item>
-            <Form.Item
-              name="time"
-              rules={[
-                {
-                  required: true,
-                  message: "Please Enter Phone Number",
-                },
-              ]}
-              hasFeedback
-            >
-              <Input
-                type="time"
+              <TimePicker
+                // use24Hours
+                // format="h:mm:ss A"
+                // locale={customLocale}
+                // defaultValue={moment()}
                 name="time"
-                onChange={handleChange}
-                className="w-full py-2 text-lg border-2 cursor-pointer h-14"
+                placeholder="Select Appointment Time"
+                size="large"
+                className="w-full h-14"
               />
             </Form.Item>
             <Form.Item
@@ -148,9 +191,46 @@ const BookingForm = () => {
               ]}
               hasFeedback
             >
-              <Input
-                type="date"
+              <DatePicker
                 name="date"
+                placeholder="Select Appiontment Date"
+                size="large"
+                className="w-full py-2 text-lg border-2 cursor-pointer h-14"
+            
+              />
+            </Form.Item>
+              <Form.Item
+              name="address"
+              rules={[
+                {
+                  required: true,
+                  message: "Please Enter Address",
+                },
+              ]}
+              hasFeedback
+            >
+              <Input
+                type="text"
+                placeholder="Enter Address"
+                name="address"
+                onChange={handleChange}
+                className="w-full py-2 text-lg border-2 cursor-pointer h-14"
+              />
+            </Form.Item>
+            <Form.Item
+              name="city"
+              rules={[
+                {
+                  required: true,
+                  message: "Please Enter City/Town",
+                },
+              ]}
+              hasFeedback
+            >
+              <Input
+                type="text"
+                placeholder="Enter City/Town"
+                name="city"
                 onChange={handleChange}
                 className="w-full py-2 text-lg border-2 cursor-pointer h-14"
               />
@@ -161,7 +241,7 @@ const BookingForm = () => {
             rules={[
               {
                 required: true,
-                purpose: "Please Enter purpose",
+                message: "Please Enter Purpose of Appointment",
               },
             ]}
           >
@@ -176,7 +256,7 @@ const BookingForm = () => {
           <Button
             htmlType="submit"
             type="primary"
-            className=" my-4 text-xl cursor-pointer h-14 bg-main"
+            className="h-12 my-4 text-lg cursor-pointer sm:text-xl bg-main"
           >
             {loading ? "Booking Appointment..." : "Book an Appiontment"}
           </Button>
@@ -187,3 +267,38 @@ const BookingForm = () => {
 };
 
 export default BookingForm;
+
+{
+  /* <TimePicker use12Hours format="h:mm:ss A" onChange={onChange} /> */
+}
+// import antd/dist/reset.css
+// antd/dist/antd.css
+
+// primary-color: #f5222d;
+
+// import { TimePicker } from 'antd';
+// import moment from 'moment';
+// import 'antd/dist/antd.css';
+
+
+
+// const CustomTimePicker = () => {
+//   return (
+//     <TimePicker
+//       locale={customLocale}
+//       defaultValue={moment()}
+//       // Other TimePicker props...
+//     />
+//   );
+// };
+
+// export default CustomTimePicker;
+
+// /* Your CSS file */
+// .custom-timepicker .ant-time-picker-footer-btn {
+//   /* Adjust background-color, color, or any other styles as needed */
+//   background-color: #f5222d; /* Example background color */
+//   color: white; /* Example text color */
+//   border-color: #f5222d; /* Example border color */
+//   /* Any other styles */
+// }

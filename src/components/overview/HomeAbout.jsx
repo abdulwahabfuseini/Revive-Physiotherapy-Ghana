@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const HomeAbout = () => {
   return (
-    <div className="px-4 pt-8 mt-12 sm:bg-gray-200 sm:mb-14">
+    <div className="px-4 pt-8 mt-12 bg-gray-200 sm:mb-14">
       <div className="grid mx-auto sm:grid-cols-2 place-items-center max-w-7xl gap-y-12">
         <div className="space-y-3 ">
           <div className="flex items-center gap-2">
             <span className="w-10 h-[1.8px] bg-green-600"></span>
-            <h1 className="text-2xl font-semibold text-green-600">PT. ISAAC BAAFI</h1>
+            <h1 className="text-2xl font-semibold text-green-600">PT. ISAAC BARFI</h1>
             <span className="w-10 h-[1.8px] bg-green-600"></span>
           </div>
           <p className="text-lg break-words sm:text-xl">

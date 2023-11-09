@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+      window.scrollY > 80 ? setSticky(true) : setSticky(false);
     });
   });
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
               <Image
                 src={Logo}
                 alt="logo"
-                className="w-14 h-14 object-contain shadow-sm rounded-full p-[0.6px]"
+                className="w-14 h-14 object-contain shadow-sm rounded-full"
               />
               <h1 className="sm:text-lg font-semibold ">
                 REVIVE PHYSIOTHERAPY <br /> GHANA

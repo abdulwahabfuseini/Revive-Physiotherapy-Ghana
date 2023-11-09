@@ -5,22 +5,24 @@ import Social from "./connect/Social";
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-white">
+    <div className="w-full h-full bg-white shadow">
       <div className="grid gap-5 px-4 py-10 mx-auto max-w-7xl sm:px-5 grid-auto-fit lg:place-items-center ">
         <div>
           <Link href="/">
             <div className="flex items-center gap-2">
-            <Image
+              <Image
                 src={Logo}
                 alt="logo"
-                className="w-14 h-14 object-contain shadow-sm rounded-full p-[0.6px] bg-white"
+                className="object-contain bg-white rounded-full shadow-sm w-14 h-14"
               />
               <h1 className="mb-2 text-lg font-semibold sm:text-base ">
                 REVIVE PHYSIOTHERAPY <br /> GHANA
               </h1>
             </div>
           </Link>
-          <p className="text-xl font-medium p-3"><span className="font-semibold">Motto:</span> Yes We Revive!!!</p>
+          <p className="p-3 text-xl font-medium">
+            <span className="font-semibold">Motto:</span> Yes We Revive!!!
+          </p>
         </div>
         <div>
           <h1 className="mb-3 text-xl font-semibold uppercase">Quick Links</h1>
@@ -46,12 +48,19 @@ const Footer = () => {
           <h1 className="mb-3 text-xl font-semibold uppercase">Contact Info</h1>
           <div className="text-lg">
             <a href="tel:+233 55 433 9112">
-              <span className="font-semibold">Hotline:</span>+233 55 433 9112
+              <span className="font-semibold">Hotline:</span> +233 55 433 9112
             </a>
-            <p><span className="font-semibold">Address:</span> P.O.BOX 419 - Achimota</p>
-            <p><span className="font-semibold">Location:</span> Achimota Mile 7, Accra</p>
+            <p>
+              <span className="font-semibold">Address:</span> P.O.BOX 419 -
+              Achimota
+            </p>
+            <p>
+              <span className="font-semibold">Location:</span> Achimota Mile 7,
+              Accra
+            </p>
             <a href="mailto:revivephysiotherapyghana@gmail.com">
-              <span className="font-semibold">Email:</span> revivephysiotherapyghana@gmail.com
+              <span className="font-semibold">Email:</span>{" "}
+              revivephysiotherapyghana@gmail.com
             </a>
           </div>
         </div>
@@ -59,11 +68,12 @@ const Footer = () => {
         <Social />
       </div>
       <div className="grid py-4 text-lg text-center text-white place-items-center gap-y-3 bg-main">
-        <h1 className="flex gap-2">
+        <p className="flex gap-2">
           &copy; 2023 - Revive Physiotherapy - Ghana{" "}
-          <br className="sm:hidden" /> <span className="hidden sm:block">|</span> All right Reserved
-        </h1>
-        <h4 className="">Developed By: F.A.W</h4>
+          <br className="sm:hidden" />{" "}
+          <span className="hidden sm:block">|</span> All Right Reserved
+        </p>
+        <h4 className="">Developed By: F.A.WAHAB</h4>
       </div>
     </div>
   );

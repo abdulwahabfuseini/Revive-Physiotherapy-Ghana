@@ -5,16 +5,12 @@ import { NextResponse } from "next/server";
 export const POST = async (req) => {
   try {
     await connectMongoDB();
-    const { fullname, email, picture, description } = await req.json();
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ description:", description)
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ picture:", picture)
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ email:", email)
-    console.log("🚀 ~ file: route.js:7 ~ POST ~ fullname:", fullname)
+    const { fullname, email, description } = await req.json();
+   
   
     const comment = new Comments({
       fullname,
       email,
-      picture, 
       description
     });
 

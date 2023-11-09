@@ -13,7 +13,7 @@ const BookingSchema = new Schema({
         type: String,
         required: true
     },
-    subject: {
+    gender: {
         type: String,
         required: true
     },
@@ -22,6 +22,14 @@ const BookingSchema = new Schema({
         required: true
     },
     date: {
+        type: String,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
+    city: {
         type: String,
         required: true
     },

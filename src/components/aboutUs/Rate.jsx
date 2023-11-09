@@ -10,7 +10,7 @@ const Rate = () => {
   const [details, setDetails] = useState({
     fullname: "",
     email: "",
-    picture: "",
+    // picture: "",
     description: "",
   });
 
@@ -40,16 +40,16 @@ const Rate = () => {
     }
   };
   return (
-    <div className="grid gap-5 py-3 sm:grid-cols-2 gap-y-6">
+    <div className="grid gap-4 py-3 sm:grid-cols-2 gap-y-6">
       <div>
         <header className="text-3xl capitalize text-main">
           Rate our performance by providing your details
         </header>
-        <div className="flex items-center gap-3 py-3">
+        <div className="flex items-center gap-2 py-3">
           <h1 className="font-semibold text-green-600 uppercase ">
             Say Something About Revive
           </h1>
-          <span className="w-16 h-[1.8px] bg-green-600 "></span>
+          <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
         </div>
       </div>
       <Form onFinish={handleSubmit} form={form}>
@@ -90,7 +90,7 @@ const Rate = () => {
             className="w-full text-lg border-2 cursor-pointer h-14"
           />
         </Form.Item>
-        <Form.Item
+        {/* <Form.Item
           name="picture"
           rules={[
             {
@@ -107,7 +107,7 @@ const Rate = () => {
             accept=".jpg,.png,.jpeg"
             className="bg-gray-100 border-none"
           />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item
           name="description"
           rules={[
@@ -128,7 +128,7 @@ const Rate = () => {
         <Button
           htmlType="submit"
           type="primary"
-          className=" my-2 text-xl cursor-pointer h-12 bg-main"
+          className="h-12 my-2 text-xl cursor-pointer bg-main"
         >
           {loading ? "Submitting..." : "Submit"}
         </Button>

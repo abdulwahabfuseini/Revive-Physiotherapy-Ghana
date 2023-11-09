@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ['localhost'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+
+
+
+
+// _mongodb._tcp.revive-physiotherapy-gh.m9fguu4.mongodb.net'

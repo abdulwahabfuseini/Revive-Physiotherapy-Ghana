@@ -12,7 +12,7 @@ const Tips = () => {
             <h1 className="font-semibold text-green-600 uppercase">
               Physiotherapy Advice
             </h1>
-            <span className="w-16 h-[1.8px] bg-green-600"></span>
+            <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
           </div>
         </div>
         <div>
@@ -36,7 +36,7 @@ const Tips = () => {
               className="object-contain"
               alt="banner"
             />
-            <h1 className="py-3 text-xl font-semibold text-green-600">
+            <h1 className="py-3 text-lg font-semibold text-green-600">
               {tips.title}
             </h1>
             <p className="text-lg">{tips.content}</p>

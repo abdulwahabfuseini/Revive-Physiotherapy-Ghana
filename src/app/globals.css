@@ -14,3 +14,19 @@
     font-family: 'PT Sans', sans-serif;
   }
 }
+
+
+.bounce{
+    animation: movement 3s infinite 1s ease-in-out;
+}
+@keyframes movement{
+    0%{
+        transform: translateX(0);
+    }
+    60%{
+        transform: translateX(8px);
+    }
+    100%{
+        transform: translateX(12px);
+    }
+}

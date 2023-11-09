@@ -3,22 +3,21 @@ import Link from "next/link";
 
 const Appointment = () => {
   return (
-    <div className="grid py-3 sm:grid-cols-2 gap-6" id="appointment">
+    <div className="grid gap-6 py-3 sm:grid-cols-2 " id="appointment">
       <div>
         <header className="text-3xl text-main">Consultation With Revive</header>
         <div className="flex items-center gap-3 py-3">
           <h1 className="font-semibold text-green-600 uppercase ">
-            Book an Appointment
+            Schedule an Appointment
           </h1>
-
-          <span className="w-16 h-[1.8px] bg-green-600 "></span>
+          <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
         </div>
         <p className="text-lg">
           {" "}
           We offer home and private sessions that can be arranged through
           booking.{" "}
         </p>
-        <div className="text-lg py-4 space-y-4">
+        <div className="py-4 space-y-4 text-lg">
           <div>
             <p>MONDAY - FRIDAY</p>
             <p>6:15 am - 5:30 pm</p>
@@ -36,14 +35,14 @@ const Appointment = () => {
         <Link href="/booking">
           <button
             type="submit"
-            className="px-6 py-3 my-6 text-lg text-white rounded-md bg-main hover:bg-green-600 sm:text-xl"
+            className="px-3 py-3 my-6 text-white rounded-md sm:px-6 bg-main hover:bg-green-600 sm:text-lg"
           >
             Book an Appointment
           </button>
         </Link>
       </div>
-      <div className="relative">
-        <Image fill src="/images/booking.png" alt="booking"  objectFit="contain"/>
+      <div className="flex items-center justify-center bounce">
+        <Image width={400} height={100} src="/images/consult.png" alt="booking"  objectFit="contain"/>
       </div>
     </div>
   );

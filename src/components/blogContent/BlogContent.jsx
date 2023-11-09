@@ -4,7 +4,7 @@ import HeadTitle from '../HeadTitle'
 const BlogContent = () => {
   return (
     <div>
-        <HeadTitle path="Blog" title="What our Client Says" />
+        <HeadTitle path="Blog" title="our blog" />
     </div>
   )
 }

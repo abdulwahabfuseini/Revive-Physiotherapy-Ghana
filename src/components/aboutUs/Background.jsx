@@ -4,7 +4,6 @@ import HeadTitle from "../HeadTitle";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css/pagination";
 import "swiper/css";
 import { bannerSlide } from "@/assets/Data";
 
@@ -12,10 +11,10 @@ const Background = () => {
   return (
     <>
       <HeadTitle path="About" title="Who we are" />
-      <div className="flex flex-col lg:items-center my-6 lg:flex-row gap-x-10 gap-y-16 ">
-        <div className="w-full space-y-3 lg:w-1/2">
-          <p className="break-words text-lg">
-            Welcome to Revive PhysioTherapy - Ghana, We are a specialized team
+      <div className="flex flex-col my-6 lg:items-center lg:flex-row gap-x-10 gap-y-16 ">
+        <div className="w-full space-y-5 lg:w-1/2">
+          <p className="text-lg break-words">
+            Welcome to Revive Physiotherapy - Ghana, We are a specialized team
             of physiotherapists with the energy, experience and enthusiasm to
             achieve the very best results for all patients regardless of age or
             problem. we offer home and private sessions that can be arranged
@@ -51,7 +50,7 @@ const Background = () => {
                       width={600}
                       height={40}
                       src={`/images/${item.cover}`}
-                      className="object-cover w-full h-48 sm:h-72"
+                      className="object-cover w-full h-52 sm:h-72 lg:h-80"
                       alt="banner"
                     />
                   </SwiperSlide>

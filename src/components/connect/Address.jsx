@@ -47,7 +47,7 @@ const Address = () => {
           <h1 className="text-lg font-semibold text-main">
             Postal Address
           </h1>
-          <h1>P.O.BOX 419</h1>
+          <h1>P.O.BOX GS 0899 - Achimota</h1>
         </div>
         <div className="grid items-center gap-3 bg-white hover:shadow-md cursor-pointer py-1.5 px-4">
           <Image width={45} height={45} src="/SVG/street.gif" alt="street" />
