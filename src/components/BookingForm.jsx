@@ -231,36 +231,3 @@ const BookingForm = () => {
 };
 
 export default BookingForm;
-
-{
-  /* <TimePicker use12Hours format="h:mm:ss A" onChange={onChange} /> */
-}
-// import antd/dist/reset.css
-// antd/dist/antd.css
-
-// primary-color: #f5222d;
-
-// import { TimePicker } from 'antd';
-// import moment from 'moment';
-// import 'antd/dist/antd.css';
-
-// const CustomTimePicker = () => {
-//   return (
-//     <TimePicker
-//       locale={customLocale}
-//       defaultValue={moment()}
-//       // Other TimePicker props...
-//     />
-//   );
-// };
-
-// export default CustomTimePicker;
-
-// /* Your CSS file */
-// .custom-timepicker .ant-time-picker-footer-btn {
-//   /* Adjust background-color, color, or any other styles as needed */
-//   background-color: #f5222d; /* Example background color */
-//   color: white; /* Example text color */
-//   border-color: #f5222d; /* Example border color */
-//   /* Any other styles */
-// }
