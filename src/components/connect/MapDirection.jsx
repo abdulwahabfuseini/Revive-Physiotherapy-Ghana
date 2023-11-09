@@ -1,7 +1,7 @@
 const MapDirection = () => {
   return (
-    <div className="w-full h-[600px]">
-      <header className="text-2xl sm:text-3xl font-medium text-center pt-14 pb-6">
+    <div className="w-full h-[600px] mb-20">
+      <header className="pb-6 text-2xl font-medium text-center sm:text-3xl pt-14">
         {" "}
         Locate Us
       </header>

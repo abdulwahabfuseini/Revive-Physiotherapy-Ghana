@@ -1,10 +1,8 @@
 "use client";
 
-import { Button, DatePicker, Form, Input, Select, TimePicker } from "antd";
+import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { useState } from "react";
-// import moment from 'moment';
-// import 'antd/dist/antd.css';
 
 const BookingForm = () => {
   const [form] = Form.useForm();
@@ -14,19 +12,14 @@ const BookingForm = () => {
     email: "",
     phoneNumber: "",
     gender: "",
-    address: "",
-    city: "",
     time: "",
     date: "",
+    address: "",
+    city: "",
     purpose: "",
   });
-
   
 
-  const handleValue = (value) => {
-    console.log(value);
-  };
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBookingDetails({ ...bookingDetails, [name]: value });
@@ -53,17 +46,12 @@ const BookingForm = () => {
     }
   };
 
-  // const customLocale = {
-  //   lang: {
-  //     ok: 'Select', 
-  //   },
-    
-  // };
-  
   return (
     <div className="max-w-4xl px-3 py-8 mx-auto sm:px-4">
       <div>
-        <h1 className="pb-8 text-2xl text-center uppercase sm:text-4xl">Medical Appointment Form</h1>
+        <h1 className="pb-8 text-2xl text-center uppercase sm:text-4xl">
+          Medical Appointment Form
+        </h1>
         <Form onFinish={handleSubmit} form={form}>
           <div className="grid sm:grid-cols-2 gap-x-3">
             <Form.Item
@@ -131,33 +119,12 @@ const BookingForm = () => {
               ]}
               hasFeedback
             >
-              <Select
-                size="large"
-                className="w-full text-lg cursor-pointer"
-                labelInValue
+              <Input
+                type="text"
+                placeholder="Enter Gender"
                 name="gender"
-                defaultValue={{
-                  value: "Select Gender",
-                  label: "Select Gender",
-                }}
-                style={{
-                  width: "100%",
-                }}
-                onChange={handleValue}
-                options={[
-                  {
-                    value: "Male",
-                    label: "Male",
-                  },
-                  {
-                    value: "Female",
-                    label: "Female",
-                  },
-                  {
-                    value: "Prefer ot to say",
-                    label: "Prefer ot to say",
-                  },
-                ]}
+                onChange={handleChange}
+                className="w-full py-2 text-lg border-2 cursor-pointer h-14"
               />
             </Form.Item>
             <Form.Item
@@ -170,15 +137,11 @@ const BookingForm = () => {
               ]}
               hasFeedback
             >
-              <TimePicker
-                // use24Hours
-                // format="h:mm:ss A"
-                // locale={customLocale}
-                // defaultValue={moment()}
-                name="time"
+              <Input
+               type="time"
                 placeholder="Select Appointment Time"
-                size="large"
-                className="w-full h-14"
+                onChange={handleChange}
+                className="relative w-full py-2 text-lg border-2 cursor-pointer h-14"
               />
             </Form.Item>
             <Form.Item
@@ -191,15 +154,15 @@ const BookingForm = () => {
               ]}
               hasFeedback
             >
-              <DatePicker
-                name="date"
+              <Input
+                type="date"
                 placeholder="Select Appiontment Date"
-                size="large"
-                className="w-full py-2 text-lg border-2 cursor-pointer h-14"
-            
+                name="date"
+                onChange={handleChange}
+                className="w-full py-2 text-lg border-2 cursor-pointer h-14 placeholder:bg-black"
               />
             </Form.Item>
-              <Form.Item
+            <Form.Item
               name="address"
               rules={[
                 {
@@ -279,8 +242,6 @@ export default BookingForm;
 // import { TimePicker } from 'antd';
 // import moment from 'moment';
 // import 'antd/dist/antd.css';
-
-
 
 // const CustomTimePicker = () => {
 //   return (
