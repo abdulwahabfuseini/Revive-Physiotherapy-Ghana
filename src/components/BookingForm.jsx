@@ -139,6 +139,7 @@ const BookingForm = () => {
             >
               <Input
                type="time"
+                name="time"
                 placeholder="Select Appointment Time"
                 onChange={handleChange}
                 className="relative w-full py-2 text-lg border-2 cursor-pointer h-14"
