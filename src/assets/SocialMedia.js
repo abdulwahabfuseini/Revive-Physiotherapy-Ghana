@@ -15,17 +15,10 @@ export const connect = [
     },
     {
       id: 3,
-      icon: "twitter.png",
+      icon: "tiktok.png",
       color: "black",
-      link: "https://twitter.com/revivephysiotherapy_ghana",
-      title: "revivephysiotherapy_ghana",
-    },
-    {
-      id: 4,
-      icon: "linkedin.png",
-      color: "blue",
-      link: "https://www.linkedin.com/in/revivephysiotherapy_ghana/",
-      title: "revivephysiotherapy_ghana",
+      link: "https:www.tiktok.com/@revive_physiotherapy?_t8YnV2U18ZZ&_r=1",
+      title: "@revive_physiotherapy?_t8YnV2U18ZZ&_r=1",
     },
     {
         id: 5,

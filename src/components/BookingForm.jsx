@@ -114,7 +114,7 @@ const BookingForm = () => {
               rules={[
                 {
                   required: true,
-                  message: "Please Select Gender",
+                  message: "Please Enter Gender",
                 },
               ]}
               hasFeedback

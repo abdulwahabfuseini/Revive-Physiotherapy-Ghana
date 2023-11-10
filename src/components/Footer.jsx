@@ -51,8 +51,7 @@ const Footer = () => {
               <span className="font-semibold">Hotline:</span> +233 55 433 9112
             </a>
             <p>
-              <span className="font-semibold">Address:</span> P.O.BOX 419 -
-              Achimota
+              <span className="font-semibold">Address:</span>P.O.BOX GS 0899 - Achimota
             </p>
             <p>
               <span className="font-semibold">Location:</span> Achimota Mile 7,
