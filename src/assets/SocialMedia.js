@@ -3,7 +3,7 @@ export const connect = [
       id: 1,
       icon: "facebookf.png",
       color: "blue",
-      link: "https://web.facebook.com/fuseini.abdulwahab.50",
+      link: "https://web.facebook.com/Dr.isaac.barfi.Pt.112",
       title: "Revive Physiotherapy",
     },
     {
@@ -17,8 +17,8 @@ export const connect = [
       id: 3,
       icon: "tiktok.png",
       color: "black",
-      link: "https:www.tiktok.com/@revive_physiotherapy?_t8YnV2U18ZZ&_r=1",
-      title: "@revive_physiotherapy?_t8YnV2U18ZZ&_r=1",
+      link: "https://www.tiktok.com/@revive_physiotherapy?_t8YnV2tJ18ZZ&_r=1",
+      title: "@revive_physiotherapy?_t8YnV2tJ18ZZ&_r=1",
     },
     {
         id: 5,
