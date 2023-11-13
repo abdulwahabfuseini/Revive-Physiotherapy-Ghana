@@ -15,7 +15,8 @@ const Testimonial = () => {
   useEffect(() => {
     const getComment = async () => {
       setLoading(true);
-      const res = await fetch("https://revive-physiotherapy.vercel.app/api/patient", {
+      // const res = await fetch("https://revive-physiotherapy.vercel.app/api/patient", {
+      const res = await fetch("/api/patient", {
         cache: "no-store",
       });
 
