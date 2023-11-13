@@ -254,7 +254,7 @@ export const Therapies = [
     cover: "stroke.jpg",
     type: "Stroke Rehabilitation",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptas.",
+    "Stroke rehabilitation focuses on helping individuals recover and regain function after experiencing a stroke.",
     description:
       "Stroke rehabilitation focuses on helping individuals recover and regain function after experiencing a stroke. Let's discuss the causes, symptoms, and aspects related to stroke rehabilitation:",
     title1: "Causes Of Stroke Rehabilitation",
@@ -1494,7 +1494,7 @@ export const Therapies = [
     cover: "upperpain.jpeg",
     type: "Upper Spine Pain",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptas.",
+      "Upper spine pain, often referred to as thoracic spine pain, can arise from various causes and present with specific symptoms.",
     description:
       "Upper spine pain, often referred to as thoracic spine pain, can arise from various causes and present with specific symptoms. Here’s an overview of the causes, symptoms, and potential treatments for upper spine pain:",
     title1: "Causes Of Upper Spine Pain:",
