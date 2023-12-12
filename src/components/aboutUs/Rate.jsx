@@ -22,7 +22,7 @@ const Rate = () => {
   const handleSubmit = async (values) => {
     setLoading(true);
     try {
-      const res = await fetch("/api/posts", {
+      const res = await fetch("/api/patient", {
         method: "POST",
         headers: {
           Accept: "application/json",
