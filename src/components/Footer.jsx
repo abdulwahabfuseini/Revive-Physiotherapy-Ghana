@@ -46,20 +46,34 @@ const Footer = () => {
         </div>
         <div>
           <h1 className="mb-3 text-xl font-semibold uppercase">Contact Info</h1>
-          <div className="text-lg">
-            <a href="tel:+233 55 433 9112">
-              <span className="font-semibold">Hotline:</span> +233 55 433 9112
+          <div>
+            <a href="tel:+233 55 433 9112" className="font-semibold text-sm">
+              Hotline:
+              <span className=" font-normal text-lg"> +233 55 433 9112</span>
             </a>
-            <p>
-              <span className="font-semibold">Address:</span>P.O.BOX GS 0899 - Achimota
+            <p className="font-semibold text-sm">
+              Address:
+              <span className="font-normal text-lg">
+                {" "}
+                P.O.BOX GS 0899 - Achimota
+              </span>
             </p>
-            <p>
-              <span className="font-semibold">Location:</span> Achimota Mile 7,
-              Accra
+            <p className="font-semibold text-sm">
+              Location:
+              <span className="font-normal text-lg">
+                {" "}
+                Achimota Mile 7, Accra
+              </span>
             </p>
-            <a href="mailto:revivephysiotherapyghana@gmail.com">
-              <span className="font-semibold">Email:</span>{" "}
-              revivephysiotherapyghana@gmail.com
+            <a
+              href="mailto:revivephysiotherapyghana@gmail.com"
+              className="font-semibold text-sm"
+            >
+              Email:
+              <span className="font-normal text-lg">
+                {" "}
+                revivephysiotherapyghana@gmail.com
+              </span>
             </a>
           </div>
         </div>

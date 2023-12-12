@@ -8,32 +8,34 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useEffect, useState } from "react";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const Testimonial = () => {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   useEffect(() => {
     const getComment = async () => {
       setLoading(true);
-      // const res = await fetch("https://revive-physiotherapy.vercel.app/api/patient", {
       const res = await fetch("/api/patient", {
         cache: "no-store",
       });
 
-      if (!res.ok) {
-        throw new Error("Failed to fetch data");
+      if (res.ok) {
+        router.refresh();
       }
 
       const patient = await res.json();
       console.log("🚀 ~ file: page.jsx:33 ~ getComment ~ patient:", patient);
-
       setRecords(patient);
+
       setTimeout(() => {
         setLoading(false);
       }, 80);
     };
     getComment();
-  }, []);
+  },[router]);
 
   return (
     <div className="py-10">
@@ -73,22 +75,21 @@ const Testimonial = () => {
               {records.map((comment) => (
                 <SwiperSlide key={comment._id} className="mt-6">
                   <div className="relative">
-                  <FaQuoteLeft className="absolute top-0 text-3xl text-gray-400 left-3"/>
-                   <div className="z-20 grid gap-2 p-3 place-items-center">
-                   <Image
-                      width={80}
-                      height={80}
-                      src="/SVG/man.png"
-                      alt="logo"
-                      className="object-contain rounded-full"
-                    />
-                    <h1 className="text-lg font-semibold text-green-600 capitalize">
-                      {comment.fullname}
-                    </h1>
-                    <p>{comment.description}</p>
-                   
-                   </div>
-                   <FaQuoteRight className="absolute bottom-0 text-3xl text-gray-400 right-3" />
+                    <FaQuoteLeft className="absolute top-0 text-3xl text-gray-400 left-3" />
+                    <div className="z-20 grid gap-2 p-3 place-items-center">
+                      <Image
+                        width={80}
+                        height={80}
+                        src="/SVG/man.png"
+                        alt="logo"
+                        className="object-contain rounded-full"
+                      />
+                      <h1 className="text-lg font-semibold text-green-600 capitalize">
+                        {comment.fullname}
+                      </h1>
+                      <p>{comment.description}</p>
+                    </div>
+                    <FaQuoteRight className="absolute bottom-0 text-3xl text-gray-400 right-3" />
                   </div>
                 </SwiperSlide>
               ))}

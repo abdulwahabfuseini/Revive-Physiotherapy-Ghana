@@ -49,7 +49,7 @@ const Rate = () => {
           <h1 className="font-semibold text-green-600 uppercase ">
             Say Something About Revive
           </h1>
-          <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
+          <span className="w-10 h-[1.8px] bg-green-600 sm:w-8 lg:w-16"></span>
         </div>
       </div>
       <Form onFinish={handleSubmit} form={form}>

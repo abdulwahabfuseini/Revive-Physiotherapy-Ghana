@@ -14,7 +14,7 @@ const Choose = () => {
             <h1 className="font-semibold text-green-600 uppercase ">
               why choose us
             </h1>
-            <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
+            <span className="w-12 h-[1.8px] bg-green-600 sm:w-6 lg:w-16"></span>
           </div>
         </div>
         <div>

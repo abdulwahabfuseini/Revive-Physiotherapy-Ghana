@@ -1,14 +1,31 @@
-import Comments from "@/models/Comments"
-import { connectMongoDB } from "@/utils/db"
-import { NextResponse } from "next/server"
+import Comments from "@/models/Comments";
+import { connectMongoDB } from "@/utils/db";
+import { NextResponse } from "next/server";
 
+export const POST = async (req) => {
+  try {
+    await connectMongoDB();
+    const { fullname, email, description } = await req.json();
+   
+    const comment = new Comments({
+      fullname,
+      email,
+      description
+    });
+
+    await comment.save();
+    return new NextResponse("Thanks for your cmoment", { status: 201 });
+  } catch (error) {
+    return new NextResponse("Database Error", { status: 500 });
+  }
+};
 
 export const GET = async (req) => {
-    try {
-        await connectMongoDB()
-        const patient = await Comments.find()
-        return new NextResponse(JSON.stringify(patient), {status: 201})
-    } catch (error) {
-        return new NextResponse("Database Error", {status: 500})
-    }
+  try {
+      await connectMongoDB()
+      const patients = await Comments.find()
+      return new NextResponse(JSON.stringify(patients), {status: 201})
+  } catch (error) {
+      return new NextResponse("Database Error", {status: 500})
+  }
 }
