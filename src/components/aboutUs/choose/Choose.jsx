@@ -5,7 +5,7 @@ import Card from "./Card";
 const Choose = () => {
   return (
     <div className="grid py-16 place-items-center">
-      <div className="grid sm:grid-cols-2">
+      <div className="grid lg:grid-cols-2">
         <div>
           <header className="text-2xl font-semibold text-main">
             Revive Physiotherapy - Ghana
@@ -14,7 +14,7 @@ const Choose = () => {
             <h1 className="font-semibold text-green-600 uppercase ">
               why choose us
             </h1>
-            <span className="w-12 h-[1.8px] bg-green-600 sm:w-6 lg:w-16"></span>
+            <span className="w-9 h-[1.8px] bg-green-600 sm:w-6 lg:w-16"></span>
           </div>
         </div>
         <div>
@@ -23,7 +23,7 @@ const Choose = () => {
           </p>
         </div>
       </div>
-      <div className="grid w-full gap-3 py-6 grid-auto-fit-xl h-full">
+      <div className="grid w-full h-full gap-3 py-6 grid-auto-fit-xl">
         {Treatment.map((treat) => (
           <Card key={treat.id} treat={treat} />
         ))}

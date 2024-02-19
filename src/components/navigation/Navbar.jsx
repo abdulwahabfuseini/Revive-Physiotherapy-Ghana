@@ -25,20 +25,20 @@ const Navbar = () => {
             : "w-full  bg-white h-full text-slate-800"
         }  py-3 sm:px-6 px-2 z-50`}
       >
-        <div className="flex items-center justify-between max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mx-auto max-w-7xl">
           <Link href="/">
             <div className="flex items-center gap-2">
               <Image
                 src={Logo}
                 alt="logo"
-                className="w-14 h-14 object-contain shadow-sm rounded-full"
+                className="object-contain rounded-full shadow-sm w-14 h-14"
               />
-              <h1 className="sm:text-lg font-semibold ">
+              <h1 className="text-sm font-semibold sm:text-lg ">
                 REVIVE PHYSIOTHERAPY <br /> GHANA
               </h1>
             </div>
           </Link>
-          <ul className="lg:flex items-center gap-8 hidden">
+          <ul className="items-center hidden gap-8 lg:flex">
             {Naviagte.map((navLink) => (
               <li className="text-xl font-semibold" key={navLink.id}>
                 <Link href={navLink.path}>{navLink.display}</Link>

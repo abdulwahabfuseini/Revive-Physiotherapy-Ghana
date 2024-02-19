@@ -1,32 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bodoni+Moda:opsz@6..96&family=Cardo&family=Gilda+Display&family=IBM+Plex+Serif:wght@300&family=PT+Sans&family=Playfair+Display&family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Bodoni+Moda:opsz@6..96&family=Cardo&family=Gilda+Display&family=IBM+Plex+Serif:wght@300&family=PT+Sans&family=Playfair+Display&family=Titillium+Web&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    h1, h2, h4,  h5, h6 {
-        font-family: 'IBM Plex Serif', serif;
+@layer base {
+  h1,
+  h2,
+  h4,
+  h5,
+  h6 {
+    font-family: "IBM Plex Serif", serif;
   }
-  header, h3{
-    font-family: 'Playfair Display', serif;
+  header,
+  h3 {
+    font-family: "Playfair Display", serif;
   }
-  p, a, button, span{
-    font-family: 'PT Sans', sans-serif;
+  p,
+  a,
+  button,
+  span {
+    font-family: "PT Sans", sans-serif;
   }
 }
 
-
-.bounce{
-    animation: movement 3s infinite 1s ease-in-out;
+.bounce {
+  animation: movement 3s infinite 1s ease-in-out;
 }
-@keyframes movement{
-    0%{
-        transform: translateX(0);
-    }
-    60%{
-        transform: translateX(8px);
-    }
-    100%{
-        transform: translateX(12px);
-    }
+@keyframes movement {
+  0% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(12px);
+  }
+}
+
+.cardloader {
+  height: 200px;
+  display: block;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+.cardloader::after {
+  content: "";
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  top: 15px;
+  left: 1px;
+  position: absolute;
+  background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%
+    ),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 16px, transparent 0),
+    linear-gradient(#ddd 50px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 75px 175px, 100% 100px, 100% 16px, 100% 30px;
+  background-position: -185px 0, center 0, center 115px, center 142px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  to {
+    background-position: 185px 0, center 0, center 115px, center 142px;
+  }
 }

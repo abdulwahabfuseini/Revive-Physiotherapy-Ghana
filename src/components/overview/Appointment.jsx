@@ -6,11 +6,11 @@ const Appointment = () => {
     <div className="grid gap-6 py-3 sm:grid-cols-2 " id="appointment">
       <div>
         <header className="text-3xl text-main">Consultation With Revive</header>
-        <div className="flex items-center gap-3 py-3">
+        <div className="flex flex-wrap items-center gap-3 py-3">
           <h1 className="font-semibold text-green-600 uppercase ">
             Schedule an Appointment
           </h1>
-          <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
+          <span className="w-9 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
         </div>
         <p className="text-lg">
           {" "}
@@ -19,16 +19,16 @@ const Appointment = () => {
         </p>
         <div className="py-4 space-y-4 text-lg">
           <div>
-            <p>MONDAY - FRIDAY</p>
+            <p className="font-semibold">MONDAY - FRIDAY</p>
             <p>6:15 am - 5:30 pm</p>
           </div>
           <div>
-            <p>SATURDAY</p>
+            <p className="font-semibold">SATURDAY</p>
             <p>6:15 am - 5:00 pm</p>
           </div>
           <div>
-            <p>SUNDAY</p>
-            <p>Closed</p>
+            <p className="font-semibold">SUNDAY</p>
+            <p className="font-medium text-red-600">Closed</p>
           </div>
           
         </div>

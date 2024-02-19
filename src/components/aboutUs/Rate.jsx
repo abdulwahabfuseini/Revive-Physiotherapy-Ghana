@@ -45,11 +45,11 @@ const Rate = () => {
         <header className="text-3xl capitalize text-main">
           Rate our performance by providing your details
         </header>
-        <div className="flex items-center gap-2 py-3">
+        <div className="flex flex-wrap items-center gap-2 py-3">
           <h1 className="font-semibold text-green-600 uppercase ">
             Say Something About Revive
           </h1>
-          <span className="w-10 h-[1.8px] bg-green-600 sm:w-8 lg:w-16"></span>
+          <span className="w-8 h-[1.8px] bg-green-600 sm:w-8 lg:w-16"></span>
         </div>
       </div>
       <Form onFinish={handleSubmit} form={form}>

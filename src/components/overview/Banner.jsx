@@ -17,7 +17,7 @@ const Banner = () => {
   });
 
   return (
-    <div className="relative w-full sm:h-96 h-[490px]">
+    <div className="relative w-full sm:h-96 h-[480px]">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
@@ -34,7 +34,7 @@ const Banner = () => {
                   width={400}
                   height={40}
                   src={`/images/${item.cover}`}
-                  className="object-cover w-full sm:h-96 h-[490px]"
+                  className="object-cover w-full sm:h-96 h-[480px]"
                   alt="banner"
                 />
               </SwiperSlide>
@@ -42,13 +42,13 @@ const Banner = () => {
           })}
         </div>
       </Swiper>
-      <div className="absolute top-0 left-0 z-40 w-full h-full px-3 text-white sm:px-4 bg-main bg-opacity-70">
-        <div className="py-12 mx-auto sm:py-16 max-w-7xl ">
-          <h1 className="text-2xl font-medium">WELCOME TO</h1>
+      <div className="absolute top-0 left-0 z-40 w-full h-full px-3 text-white sm:px-6 bg-main bg-opacity-90 sm:bg-opacity-80">
+        <div className="py-12 mx-auto max-w-7xl ">
+          <h1 className="text-3xl font-medium">WELCOME TO</h1>
           <h4 className="hidden py-2 text-3xl uppercase sm:block">
             <span>{text}</span> <Cursor />
           </h4>
-          <h4 className="py-2 text-3xl font-medium uppercase sm:text-3xl sm:hidden">
+          <h4 className="py-2 text-2xl font-medium uppercase sm:text-3xl sm:hidden">
             Revive Physiotherapy - Ghana
           </h4>
           <p className="w-full max-w-lg mb-6 text-lg tracking-tight sm:text-xl">
@@ -58,7 +58,10 @@ const Banner = () => {
             Physiotherapy and wellness. We care about your health.
           </p>
           <Link href="/about">
-            <button className="px-3 py-2 text-lg rounded-lg bg-main hover:bg-green-600">
+            <button
+              type="button"
+              className="px-3 py-2 text-lg ease-in-out bg-blue-800 rounded-lg hover:bg-green-600"
+            >
               Learn More
             </button>
           </Link>

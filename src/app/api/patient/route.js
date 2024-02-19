@@ -14,6 +14,7 @@ export const POST = async (req) => {
     });
 
     await comment.save();
+    
     return new NextResponse("Thanks for your cmoment", { status: 201 });
   } catch (error) {
     return new NextResponse("Database Error", { status: 500 });

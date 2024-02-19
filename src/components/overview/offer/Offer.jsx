@@ -14,8 +14,8 @@ const Offer = () => {
   const [prevEl, setPrevtEl] = useState(null);
 
   return (
-    <div className="py-8">
-      <div className="grid gap-2 sm:grid-cols-2">
+    <div className="py-10 sm:py-6">
+      <div className="grid gap-2 lg:grid-cols-2">
         <div>
           <header className="text-3xl text-main">
             Physiotherapy Services at Revive
@@ -24,7 +24,7 @@ const Offer = () => {
             <h1 className="font-semibold text-green-600 uppercase ">
               Physiotherapy Services
             </h1>
-            <span className="w-16 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
+            <span className="w-9 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
           </div>
         </div>
         <div>
@@ -45,10 +45,10 @@ const Offer = () => {
         autoplay={{ delay: 6000, disableOnInteraction: false }}
         breakpoints={{
           0: {
-            slidesPerView: 1.8,
+            slidesPerView: 2.2,
           },
           400: {
-            slidesPerView: 2.2,
+            slidesPerView: 2.5,
           },
           600: {
             slidesPerView: 3.4,

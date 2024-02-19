@@ -6,9 +6,9 @@ const HomeAbout = () => {
       <div className="grid mx-auto sm:grid-cols-2 place-items-center max-w-7xl gap-y-12">
         <div className="space-y-3 ">
           <div className="flex items-center gap-2">
-            <span className="w-10 h-[1.8px] bg-green-600"></span>
+            <span className="w-5 sm:w-10 h-[1.8px] bg-green-600"></span>
             <h1 className="text-2xl font-semibold text-green-600">PT. ISAAC BARFI</h1>
-            <span className="w-10 h-[1.8px] bg-green-600"></span>
+            <span className="w-5 sm:w-10 h-[1.8px] bg-green-600"></span>
           </div>
           <p className="text-lg break-words sm:text-xl">
             A successful physiotherapist embodies a blend of clinical expertise,

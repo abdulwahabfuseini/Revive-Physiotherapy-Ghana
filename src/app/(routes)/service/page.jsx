@@ -7,7 +7,7 @@ export const metadata = {
 
 const Service = () => {
   return(
-    <div className="w-full h-full px-3 py-16 mx-auto max-w-7xl sm:px-4">
+    <div className="w-full h-full px-3 py-16 mx-auto max-w-7xl sm:px-5">
       <Whatwedo />
     </div>
   )

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="w-full h-full py-5 text-white bg-main lg:py-3">
       <div className="px-3 mx-auto max-w-7xl lg:px-4">
-        <div className="grid w-full sm:grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-3 lg:place-items-center">
+        <div className="grid w-full overflow-hidden sm:grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-3 lg:place-items-center">
           <div className="flex items-center gap-4 ">
             <Image
               width={25}
@@ -46,10 +46,10 @@ const Header = () => {
               className="icon"
               alt="email"
             />
-            <div className="leading-6">
+            <div className="w-full leading-6">
               <h4>Send us a Message</h4>
               <a
-                className="text-base text-gray-100"
+                className="text-base text-gray-100 truncate"
                 href="mailto:revivephysiotherapyghana@gmail.com"
               >
                 revivephysiotherapyghana@gmail.com

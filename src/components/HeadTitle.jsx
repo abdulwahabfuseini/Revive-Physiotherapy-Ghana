@@ -3,7 +3,7 @@ import React from 'react'
 const HeadTitle = ({path, title}) => {
   return (
     <div className="relative">
-    <h1 className="py-6 text-6xl font-bold text-gray-200 uppercase">
+    <h1 className="py-6 font-bold text-gray-200 uppercase text-7xl">
      {path}
     </h1>
     <div className="absolute top-0 left-0">

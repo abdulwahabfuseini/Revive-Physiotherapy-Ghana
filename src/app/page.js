@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Banner />
       <HomeAbout />
-      <div className="w-full h-full px-3 mx-auto max-w-7xl py-14">
+      <div className="w-full h-full px-3 mx-auto smpx-5 max-w-7xl sm:px-5">
         <Offer />
         <Tips />
         <Appointment />
