@@ -36,7 +36,7 @@ const Tips = () => {
               className="object-contain"
               alt="banner"
             />
-            <h1 className="py-3 text-lg font-semibold text-green-600 truncate">
+            <h1 className="py-3 text-lg font-semibold text-green-600">
               {tips.title}
             </h1>
             <p className="text-lg">{tips.content}</p>

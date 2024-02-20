@@ -23,7 +23,7 @@ const Choose = () => {
           </p>
         </div>
       </div>
-      <div className="grid w-full h-full gap-3 py-6 grid-auto-fit-xl">
+      <div className="grid w-full h-full gap-3 py-6 sm:grid-auto-fit-xl">
         {Treatment.map((treat) => (
           <Card key={treat.id} treat={treat} />
         ))}

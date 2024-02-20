@@ -27,19 +27,19 @@ const Footer = () => {
         <div>
           <h1 className="mb-3 text-xl font-semibold uppercase">Quick Links</h1>
           <ul className="leading-10">
-            <li className="text-xl hover:text-green-500 hover:underline">
+            <li className="text-xl hover:text-green-500 hover:underline py-1.5">
               <Link href="/">Overview</Link>
             </li>
-            <li className="text-xl hover:text-green-500 hover:underline">
+            <li className="text-xl hover:text-green-500 hover:underline py-1.5">
               <Link href="/about">About Us</Link>
             </li>
-            <li className="text-xl hover:text-green-500 hover:underline">
+            <li className="text-xl hover:text-green-500 hover:underline py-1.5">
               <Link href="/service">Our Services</Link>
             </li>
-            <li className="text-xl hover:text-green-500 hover:underline">
+            <li className="text-xl hover:text-green-500 hover:underline py-1.5">
               <Link href="/contact">Contact Us</Link>
             </li>
-            <li className="text-xl hover:text-green-500 hover:underline">
+            <li className="text-xl hover:text-green-500 hover:underline py-1.5">
               <Link href="/booking">Book Appointment</Link>
             </li>
           </ul>
@@ -47,30 +47,30 @@ const Footer = () => {
         <div>
           <h1 className="mb-3 text-xl font-semibold uppercase">Contact Info</h1>
           <div>
-            <a href="tel:+233 55 433 9112" className="font-semibold text-sm">
+            <a href="tel:+233 55 433 9112" className="text-sm font-semibold">
               Hotline:
-              <span className=" font-normal text-lg"> +233 55 433 9112</span>
+              <span className="text-lg font-normal "> +233 55 433 9112</span>
             </a>
-            <p className="font-semibold text-sm">
+            <p className="text-sm font-semibold py-1.5">
               Address:
-              <span className="font-normal text-lg">
+              <span className="text-lg font-normal">
                 {" "}
                 P.O.BOX GS 0899 - Achimota
               </span>
             </p>
-            <p className="font-semibold text-sm">
+            <p className="text-sm font-semibold py-1.5">
               Location:
-              <span className="font-normal text-lg">
+              <span className="text-lg font-normal">
                 {" "}
                 Achimota Mile 7, Accra
               </span>
             </p>
             <a
               href="mailto:revivephysiotherapyghana@gmail.com"
-              className="font-semibold text-sm"
+              className="text-sm font-semibold py-1.5"
             >
               Email:
-              <span className="font-normal text-lg">
+              <span className="text-lg font-normal">
                 {" "}
                 revivephysiotherapyghana@gmail.com
               </span>
