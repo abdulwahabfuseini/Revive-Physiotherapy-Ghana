@@ -1,12 +1,15 @@
+"use client"
+
 import { Physio } from "@/assets/Data";
 import Image from "next/image";
-import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Tips = () => {
   return (
     <div className="my-8 sm:mt-4">
       <div className="grid lg:grid-cols-2">
-        <div>
+        <motion.div  initial="hidden" whileInView={"show"}  variants={fadeIn("left", 0.4)}>
           <header className="text-3xl text-main">Tips For Physiotherapy</header>
           <div className="flex items-center gap-3 py-3">
             <h1 className="font-semibold text-green-600 uppercase">
@@ -14,18 +17,19 @@ const Tips = () => {
             </h1>
             <span className="w-9 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div  initial="hidden" whileInView={"show"}  variants={fadeIn("right", 0.4)}>
           <p className="text-lg">
             These tips serve as a guideline for physiotherapists, assisting in
             the improvement of patients&apos; physical health, overall wellness,
             and quality of life.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="grid w-full gap-3 py-4 sm:grid-auto-fit-xl">
         {Physio.map((tips) => (
-          <div
+          <motion.div
+          initial="hidden" whileInView={"show"}  variants={fadeIn("up", 0.4)}
             key={tips.id}
             className="p-3 bg-white cursor-pointer sm:p-4 hover:shadow-md"
           >
@@ -40,7 +44,7 @@ const Tips = () => {
               {tips.title}
             </h1>
             <p className="text-lg">{tips.content}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

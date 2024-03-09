@@ -1,10 +1,14 @@
+"use client"
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Header = () => {
   return (
     <div className="w-full h-full py-5 text-white bg-main lg:py-3">
       <div className="px-3 mx-auto max-w-7xl lg:px-4">
-        <div className="grid w-full overflow-hidden sm:grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-3 lg:place-items-center">
+        <motion.div initial="hidden" whileInView={"show"}  variants={fadeIn("up", 0.6)} className="grid w-full overflow-hidden sm:grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-3 lg:place-items-center">
           <div className="flex items-center gap-4 ">
             <Image
               width={25}
@@ -69,7 +73,7 @@ const Header = () => {
               <p className="text-base text-gray-100">Mon - Fri: 8AM - 5PM</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -2,11 +2,17 @@
 
 import { mission } from "@/assets/Data";
 import { Typography } from "antd";
-import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Objectives = () => {
   return (
-    <div className="grid w-full gap-3 py-10 cursor-pointer grid-auto-fit">
+    <motion.div
+      initial="hidden"
+      whileInView={"show"}
+      variants={fadeIn("up", 0.4)}
+      className="grid w-full gap-3 py-10 cursor-pointer grid-auto-fit"
+    >
       {mission.map((item) => {
         return (
           <div key={item.id}>
@@ -28,7 +34,7 @@ const Objectives = () => {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

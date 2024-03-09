@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../public/images/revive.jpg";
 import Social from "./connect/Social";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Footer = () => {
   return (
     <div className="w-full h-full bg-white shadow">
       <div className="grid gap-5 px-4 py-10 mx-auto max-w-7xl sm:px-5 grid-auto-fit lg:place-items-center ">
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("left", 0.8)}
+        >
           <Link href="/">
             <div className="flex items-center gap-2">
               <Image
@@ -23,8 +31,12 @@ const Footer = () => {
           <p className="p-3 text-xl font-medium">
             <span className="font-semibold">Motto:</span> Yes We Revive!!!
           </p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("up", 0.4)}
+        >
           <h1 className="mb-3 text-xl font-semibold uppercase">Quick Links</h1>
           <ul className="leading-10">
             <li className="text-xl hover:text-green-500 hover:underline py-1.5">
@@ -43,8 +55,12 @@ const Footer = () => {
               <Link href="/booking">Book Appointment</Link>
             </li>
           </ul>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("up", 0.4)}
+        >
           <h1 className="mb-3 text-xl font-semibold uppercase">Contact Info</h1>
           <div>
             <a href="tel:+233 55 433 9112" className="text-sm font-semibold">
@@ -76,18 +92,28 @@ const Footer = () => {
               </span>
             </a>
           </div>
-        </div>
-
-        <Social />
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("right", 0.4)}
+        >
+          <Social />
+        </motion.div>
       </div>
-      <div className="grid py-4 text-lg text-center text-white place-items-center gap-y-3 bg-main">
+      <motion.div
+        initial="hidden"
+        whileInView={"show"}
+        variants={fadeIn("up", 0.4)}
+        className="grid py-4 text-lg text-center text-white place-items-center gap-y-3 bg-main"
+      >
         <p className="flex gap-2">
           &copy; 2023 - Revive Physiotherapy - Ghana{" "}
           <br className="sm:hidden" />{" "}
           <span className="hidden sm:block">|</span> All Right Reserved
         </p>
         <h4 className="">Developed By: F.A.WAHAB</h4>
-      </div>
+      </motion.div>
     </div>
   );
 };

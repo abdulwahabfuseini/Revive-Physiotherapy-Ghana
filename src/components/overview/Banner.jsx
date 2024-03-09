@@ -7,6 +7,8 @@ import "swiper/css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { bannerSlide } from "@/assets/Data";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Banner = () => {
   const [text] = useTypewriter({
@@ -43,7 +45,7 @@ const Banner = () => {
         </div>
       </Swiper>
       <div className="absolute top-0 left-0 z-40 w-full h-full px-3 text-white sm:px-6 bg-main bg-opacity-90 sm:bg-opacity-80">
-        <div className="py-12 mx-auto max-w-7xl ">
+        <motion.div initial="hidden" whileInView={"show"}  variants={fadeIn("left", 0.4)} className="py-12 mx-auto max-w-7xl ">
           <h1 className="text-3xl font-medium">WELCOME TO</h1>
           <h4 className="hidden py-2 text-3xl uppercase sm:block">
             <span>{text}</span> <Cursor />
@@ -65,7 +67,7 @@ const Banner = () => {
               Learn More
             </button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

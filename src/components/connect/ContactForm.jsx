@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button, Form, Input } from "antd";
@@ -51,7 +53,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full h-full">
+    <motion.div
+      initial="hidden"
+      whileInView={"show"}
+      variants={fadeIn("right", 0.4)}
+      className="w-full h-full"
+    >
       <h3 className="pb-4 text-2xl text-center">Leave a Message</h3>
       <Form onFinish={handleSubmit} form={form}>
         <Form.Item
@@ -134,7 +141,7 @@ const ContactForm = () => {
           {loading ? "Sending..." : "Send Message"}
         </Button>
       </Form>
-    </div>
+    </motion.div>
   );
 };
 

@@ -3,6 +3,8 @@
 import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Rate = () => {
   const [form] = Form.useForm();
@@ -39,9 +41,14 @@ const Rate = () => {
       setLoading(false);
     }
   };
+
   return (
     <div className="grid gap-4 py-3 sm:grid-cols-2 gap-y-6">
-      <div>
+      <motion.div
+        initial="hidden"
+        whileInView={"show"}
+        variants={fadeIn("left", 0.4)}
+      >
         <header className="text-3xl capitalize text-main">
           Rate our performance by providing your details
         </header>
@@ -51,46 +58,51 @@ const Rate = () => {
           </h1>
           <span className="w-8 h-[1.8px] bg-green-600 sm:w-8 lg:w-16"></span>
         </div>
-      </div>
-      <Form onFinish={handleSubmit} form={form}>
-        <Form.Item
-          name="fullname"
-          rules={[
-            {
-              required: true,
-              message: "Please Enter Full Name",
-            },
-          ]}
-          hasFeedback
-        >
-          <Input
-            placeholder="Enter Full Name"
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView={"show"}
+        variants={fadeIn("up", 0.4)}
+      >
+        <Form onFinish={handleSubmit} form={form}>
+          <Form.Item
             name="fullname"
-            onChange={handleChange}
-            className="w-full text-lg border-2 cursor-pointer h-14"
-            type="text"
-          />
-        </Form.Item>
-        <Form.Item
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: "Please Enter email",
-            },
-            { type: "email" },
-          ]}
-          hasFeedback
-        >
-          <Input
-            type="email"
-            placeholder="Enter your Email"
+            rules={[
+              {
+                required: true,
+                message: "Please Enter Full Name",
+              },
+            ]}
+            hasFeedback
+          >
+            <Input
+              placeholder="Enter Full Name"
+              name="fullname"
+              onChange={handleChange}
+              className="w-full text-lg border-2 cursor-pointer h-14"
+              type="text"
+            />
+          </Form.Item>
+          <Form.Item
             name="email"
-            onChange={handleChange}
-            className="w-full text-lg border-2 cursor-pointer h-14"
-          />
-        </Form.Item>
-        {/* <Form.Item
+            rules={[
+              {
+                required: true,
+                message: "Please Enter email",
+              },
+              { type: "email" },
+            ]}
+            hasFeedback
+          >
+            <Input
+              type="email"
+              placeholder="Enter your Email"
+              name="email"
+              onChange={handleChange}
+              className="w-full text-lg border-2 cursor-pointer h-14"
+            />
+          </Form.Item>
+          {/* <Form.Item
           name="picture"
           rules={[
             {
@@ -108,31 +120,32 @@ const Rate = () => {
             className="bg-gray-100 border-none"
           />
         </Form.Item> */}
-        <Form.Item
-          name="description"
-          rules={[
-            {
-              required: true,
-              message: "Please Enter Description",
-            },
-          ]}
-        >
-          <TextArea
-            type="text"
-            placeholder="Say Something about Revive"
+          <Form.Item
             name="description"
-            onChange={handleChange}
-            className="w-full py-2 text-lg border-2 cursor-pointer"
-          />
-        </Form.Item>
-        <Button
-          htmlType="submit"
-          type="primary"
-          className="h-12 my-2 text-xl cursor-pointer bg-main"
-        >
-          {loading ? "Submitting..." : "Submit"}
-        </Button>
-      </Form>
+            rules={[
+              {
+                required: true,
+                message: "Please Enter Description",
+              },
+            ]}
+          >
+            <TextArea
+              type="text"
+              placeholder="Say Something about Revive"
+              name="description"
+              onChange={handleChange}
+              className="w-full py-2 text-lg border-2 cursor-pointer"
+            />
+          </Form.Item>
+          <Button
+            htmlType="submit"
+            type="primary"
+            className="h-12 my-2 text-xl cursor-pointer bg-main"
+          >
+            {loading ? "Submitting..." : "Submit"}
+          </Button>
+        </Form>
+      </motion.div>
     </div>
   );
 };

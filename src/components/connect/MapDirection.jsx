@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
+
 const MapDirection = () => {
   return (
-    <div className="w-full h-[600px] mb-20">
+    <motion.div
+      initial="hidden"
+      whileInView={"show"}
+      variants={fadeIn("up", 0.4)}
+      className="w-full h-[600px] mb-20"
+    >
       <header className="pb-6 text-2xl font-medium text-center sm:text-3xl pt-14">
         {" "}
         Locate Us
@@ -21,7 +31,7 @@ const MapDirection = () => {
           </a>
         </iframe>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

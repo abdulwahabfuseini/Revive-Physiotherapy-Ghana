@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Physiotherapy = ({ treatments }) => {
   const [toggleTab, setToggleTab] = useState(1);
@@ -17,17 +19,33 @@ const Physiotherapy = ({ treatments }) => {
           {treatments?.type}
         </header>
         <div className="grid gap-8 sm:grid-cols-3">
-          <div className="relative h-80 sm:h-[550px] border-2 w-full rounded border-gray-50  sm:col-span-1 order-2 sm:order-1">
+          <motion.div
+            initial="hidden"
+            whileInView={"show"}
+            variants={fadeIn("left", 0.4)}
+            className="relative h-80 sm:h-[550px] border-2 w-full rounded border-gray-50  sm:col-span-1 order-2 sm:order-1"
+          >
             <Image
               fill
               src={`/images/${treatments?.cover}`}
               className="object-cover"
               alt="service"
             />
-          </div>
+          </motion.div>
           <div className="order-1 w-full text-lg sm:col-span-2 sm:order-2">
-            <p>{treatments?.description}</p>
-            <div className="grid max-w-sm grid-cols-3 gap-3 p-1 mx-auto my-5 bg-white rounded-lg shadow-sm">
+            <motion.p
+              initial="hidden"
+              whileInView={"show"}
+              variants={fadeIn("right", 0.4)}
+            >
+              {treatments?.description}
+            </motion.p>
+            <motion.div
+              initial="hidden"
+              whileInView={"show"}
+              variants={fadeIn("down", 0.4)}
+              className="grid max-w-sm grid-cols-3 gap-3 p-1 mx-auto my-5 bg-white rounded-lg shadow-sm"
+            >
               <button
                 onClick={() => toggleButton(1)}
                 className={
@@ -58,9 +76,13 @@ const Physiotherapy = ({ treatments }) => {
               >
                 {treatments?.toggle3}
               </button>
-            </div>
+            </motion.div>
             {toggleTab === 1 && (
-              <div>
+              <motion.div
+                initial="hidden"
+                whileInView={"show"}
+                variants={fadeIn("up", 0.4)}
+              >
                 <h1 className="py-3 text-xl font-semibold uppercase">
                   {treatments?.title1}
                 </h1>
@@ -72,10 +94,14 @@ const Physiotherapy = ({ treatments }) => {
                     </li>
                   </ul>
                 ))}
-              </div>
+              </motion.div>
             )}
             {toggleTab === 2 && (
-              <div>
+              <motion.div
+                initial="hidden"
+                whileInView={"show"}
+                variants={fadeIn("up", 0.4)}
+              >
                 <h1 className="py-3 text-xl font-semibold uppercase">
                   {treatments?.title2}
                 </h1>
@@ -87,10 +113,14 @@ const Physiotherapy = ({ treatments }) => {
                     </li>
                   </ul>
                 ))}
-              </div>
+              </motion.div>
             )}
             {toggleTab === 3 && (
-              <div>
+              <motion.div
+                initial="hidden"
+                whileInView={"show"}
+                variants={fadeIn("up", 0.4)}
+              >
                 <h1 className="py-3 text-xl font-semibold uppercase">
                   {treatments?.title3}
                 </h1>
@@ -102,14 +132,19 @@ const Physiotherapy = ({ treatments }) => {
                     </li>
                   </ul>
                 ))}
-              </div>
+              </motion.div>
             )}
           </div>
         </div>
-        <div className="py-8">
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("up", 0.4)}
+          className="py-8"
+        >
           <h1 className="text-xl font-semibold">NOTE:</h1>
           <p className="text-lg">{treatments?.note}</p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

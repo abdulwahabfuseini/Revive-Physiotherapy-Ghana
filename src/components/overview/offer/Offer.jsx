@@ -8,6 +8,8 @@ import { Therapies } from "../../services/Data";
 import OfferCard from "./OfferCard";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const Offer = () => {
   const [nextEl, setNextEl] = useState(null);
@@ -16,7 +18,11 @@ const Offer = () => {
   return (
     <div className="py-10 sm:py-6">
       <div className="grid gap-2 lg:grid-cols-2">
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("left", 0.4)}
+        >
           <header className="text-3xl text-main">
             Physiotherapy Services at Revive
           </header>
@@ -26,51 +32,62 @@ const Offer = () => {
             </h1>
             <span className="w-9 h-[1.8px] bg-green-600 sm:w-10 lg:w-16"></span>
           </div>
-        </div>
-        <div>
-        <p className="text-lg">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("right", 0.4)}
+        >
+          <p className="text-lg">
             Physiotherapy services encompass tailored, non-invasive treatments
             aimed at restoring mobility, reducing pain, and enhancing overall
             well-being through exercises, manual therapy, and personalized care
             plans.
           </p>
-        </div>
+        </motion.div>
       </div>
-      <Swiper
-        navigation={{ nextEl, prevEl }}
-        spaceBetween={8}
-        loop={true}
-        speed={3000}
-        modules={[Autoplay, Navigation]}
-        autoplay={{ delay: 6000, disableOnInteraction: false }}
-        breakpoints={{
-          0: {
-            slidesPerView: 2.2,
-          },
-          400: {
-            slidesPerView: 2.5,
-          },
-          600: {
-            slidesPerView: 3.4,
-          },
-          768: {
-            slidesPerView: 4.2,
-          },
-          1024: {
-            slidesPerView: 6.2,
-          },
-        }}
+      <motion.div
+        initial="hidden"
+        whileInView={"show"}
+        variants={fadeIn("up", 0.4)}
       >
-        <div>
-          {Therapies.map((item, index) => {
-            return (
-              <SwiperSlide key={index} className="mt-16">
-                <OfferCard item={item} />
-              </SwiperSlide>
-            );
-          })}
-        </div>
-      </Swiper>
+        <Swiper
+          navigation={{ nextEl, prevEl }}
+          spaceBetween={8}
+          loop={true}
+          speed={3000}
+          modules={[Autoplay, Navigation]}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
+          breakpoints={{
+            0: {
+              slidesPerView: 2.2,
+            },
+            400: {
+              slidesPerView: 2.5,
+            },
+            600: {
+              slidesPerView: 3.4,
+            },
+            768: {
+              slidesPerView: 4.2,
+            },
+            1024: {
+              slidesPerView: 6.2,
+            },
+          }}
+        >
+          <div>
+            {Therapies.map((item, index) => {
+              return (
+                <SwiperSlide key={index} className="mt-16">
+                  <OfferCard item={item} />
+                </SwiperSlide>
+              );
+            })}
+          </div>
+        </Swiper>
+      </motion.div>
+
       <div className="items-center justify-center hidden gap-4 py-6 lg:flex">
         <button ref={(node) => setPrevtEl(node)}>
           <FaChevronLeft className="w-12 p-2 font-bold text-white border-2 rounded-sm h-11 bg-main" />
