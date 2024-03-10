@@ -62,7 +62,7 @@ const Banner = () => {
           <Link href="/about">
             <button
               type="button"
-              className="px-3 py-2 text-lg ease-in-out bg-blue-800 rounded-lg hover:bg-green-600"
+              className="px-3 py-2 text-lg ease-in-out bg-green-600 rounded-lg hover:bg-blue-600"
             >
               Learn More
             </button>

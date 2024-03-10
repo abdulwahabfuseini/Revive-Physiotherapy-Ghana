@@ -15,7 +15,7 @@ const Contact = () => {
       <header className="py-6 text-2xl leading-8 text-center font-smeibold">
         GET IN TOUCH WITH REVIVE PHYSIOTHERAPY - GHANA
       </header>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
         <div className="w-full sm:col-span-1 lg:col-span-2">
           <Address />
         </div>

@@ -9,12 +9,12 @@ import { fadeIn } from "@/utils/motion";
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-white shadow">
+    <footer aria-label="footer" className="w-full h-full bg-white shadow relative">
       <div className="grid gap-5 px-4 py-10 mx-auto max-w-7xl sm:px-5 grid-auto-fit lg:place-items-center ">
         <motion.div
           initial="hidden"
           whileInView={"show"}
-          variants={fadeIn("left", 0.8)}
+          variants={fadeIn("left", 0.6)}
         >
           <Link href="/">
             <div className="flex items-center gap-2">
@@ -114,7 +114,7 @@ const Footer = () => {
         </p>
         <h4 className="">Developed By: F.A.WAHAB</h4>
       </motion.div>
-    </div>
+    </footer>
   );
 };
 
