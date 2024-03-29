@@ -10,7 +10,7 @@ export const metadata = {
 
 const Contact = () => {
   return (
-    <div className="w-full h-full px-3 mx-auto max-w-7xl py-14 sm:px-4">
+    <div className="w-full h-full px-3 mx-auto overflow-x-hidden max-w-7xl py-14 sm:px-4">
      <HeadTitle path="Contact" title="Contact Us" />
       <header className="py-6 text-2xl leading-8 text-center font-smeibold">
         GET IN TOUCH WITH REVIVE PHYSIOTHERAPY - GHANA

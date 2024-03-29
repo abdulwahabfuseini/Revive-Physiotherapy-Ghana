@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <Head>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
       </Head>
-      <body className="overflow-x-hidden bg-gray-100">
+      <body className="overflow-x-hidden bg-gray-100 ">
         <Loading>
           <Navbar />
           {children}

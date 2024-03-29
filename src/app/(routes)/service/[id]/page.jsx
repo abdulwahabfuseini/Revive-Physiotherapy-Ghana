@@ -9,7 +9,7 @@ const Therapy = ({ params }) => {
   const treatments = Therapies.find((data) => data.type.toLowerCase() === type.toLowerCase());
   
   return (
-    <div className="w-full h-full ">
+    <div className="w-full h-full overflow-x-hidden">
       <div className="px-3 py-12 mx-auto max-w-7xl sm:px-4">
       <Link href="/service">
         <button className="p-2 mb-8 font-semibold text-center text-white rounded-full bg-main">
