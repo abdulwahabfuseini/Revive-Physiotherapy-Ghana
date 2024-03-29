@@ -7,10 +7,10 @@ import Tips from "@/components/overview/Tips";
 
 export default function Home() {
   return (
-    <div className="w-full overflow-x-hidden h- full">
+    <div>
       <Banner />
       <HomeAbout />
-      <div className="w-full h-full px-3 mx-auto smpx-5 max-w-7xl sm:px-5">
+      <div className="w-full h-full px-3 mx-auto max-w-7xl sm:px-5">
         <Offer />
         <Tips />
         <Appointment />

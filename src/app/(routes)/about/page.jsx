@@ -10,7 +10,7 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className="w-full h-full px-3 py-16 mx-auto overflow-x-hidden max-w-7xl sm:px-4">
+    <div className="w-full h-full px-3 py-16 mx-auto max-w-7xl sm:px-4">
       <Background />
       <Objectives />
       <Choose />

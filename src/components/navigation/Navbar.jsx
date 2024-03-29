@@ -23,7 +23,7 @@ const Navbar = () => {
           sticky
             ? "fixed top-0 left-0 w-full bg-main text-white"
             : "w-full  bg-white h-full text-slate-800"
-        }  py-3 sm:px-6 px-2 z-50`}
+        }  py-3 sm:px-6 px-3 z-50`}
       >
         <div className="flex items-center justify-between mx-auto max-w-7xl">
           <Link href="/">
